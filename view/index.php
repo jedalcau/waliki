@@ -121,6 +121,7 @@
 					</div>
                 </li>
             </ul>
+
             <!-- USUARIO SECTION -->
             <div class="dropdown mobile-user-menu float-right">
                 <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-expanded="false"><i class="fa fa-ellipsis-v"></i></a>
@@ -139,27 +140,27 @@
             <div class="sidebar-inner slimscroll">
                 <div id="sidebar-menu" class="sidebar-menu">
                     <ul>
-                        <li class="menu-title">Main</li>
+                        <li class="menu-title">Menu Principal</li>
                         <li class="active">
                             <a href="index-2.html"><i class="fa fa-dashboard"></i> <span>Dashboard</span></a>
                         </li>
 						<li>
-                            <a href="doctors.html"><i class="fa fa-user-md"></i> <span>Doctors</span></a>
+                            <a href="doctors.html"><i class="fa fa-user-md"></i> <span>Personal de Salud</span></a>
                         </li>
                         <li>
-                            <a href="patients.html"><i class="fa fa-wheelchair"></i> <span>Patients</span></a>
+                            <a href="patients.html"><i class="fa fa-wheelchair"></i> <span>Pacientes</span></a>
                         </li>
                         <li>
-                            <a href="appointments.html"><i class="fa fa-calendar"></i> <span>Appointments</span></a>
+                            <a href="appointments.html"><i class="fa fa-calendar"></i> <span>Citas</span></a>
                         </li>
-                        <li>
+                        <!--<li>
                             <a href="schedule.html"><i class="fa fa-calendar-check-o"></i> <span>Doctor Schedule</span></a>
-                        </li>
+                        </li>-->
                         <li>
-                            <a href="departments.html"><i class="fa fa-hospital-o"></i> <span>Departments</span></a>
+                            <a href="departments.html"><i class="fa fa-hospital-o"></i> <span>Consultorios</span></a>
                         </li>
-						<li class="submenu">
-							<a href="#"><i class="fa fa-user"></i> <span> Employees </span> <span class="menu-arrow"></span></a>
+						<!--<li class="submenu">
+							<a href="#"><i class="fa fa-user"></i> <span> Trabajadores </span> <span class="menu-arrow"></span></a>
 							<ul style="display: none;">
 								<li><a href="employees.html">Employees List</a></li>
 								<li><a href="leaves.html">Leaves</a></li>
@@ -177,7 +178,7 @@
 								<li><a href="provident-fund.html">Provident Fund</a></li>
 							</ul>
 						</li>
-						<li class="submenu">
+                        <li class="submenu">
 							<a href="#"><i class="fa fa-book"></i> <span> Payroll </span> <span class="menu-arrow"></span></a>
 							<ul style="display: none;">
 								<li><a href="salary.html"> Employee Salary </a></li>
@@ -293,7 +294,7 @@
                                     <a href="javascript:void(0);"><span>Level 1</span></a>
                                 </li>
                             </ul>
-                        </li>
+                        </li>-->
                     </ul>
                 </div>
             </div>
@@ -303,13 +304,14 @@
         <!-- PRINCIPAL SECTION -->
         <div class="page-wrapper">
             <div class="content">
+                <!-- CUADROS INFORMATIVOS -->
                 <div class="row">
                     <div class="col-md-6 col-sm-6 col-lg-6 col-xl-3">
                         <div class="dash-widget">
 							<span class="dash-widget-bg1"><i class="fa fa-stethoscope" aria-hidden="true"></i></span>
 							<div class="dash-widget-info text-right">
 								<h3>98</h3>
-								<span class="widget-title1">Doctors <i class="fa fa-check" aria-hidden="true"></i></span>
+								<span class="widget-title1">Personal de Salud <i class="fa fa-check" aria-hidden="true"></i></span>
 							</div>
                         </div>
                     </div>
@@ -318,7 +320,7 @@
                             <span class="dash-widget-bg2"><i class="fa fa-user-o"></i></span>
                             <div class="dash-widget-info text-right">
                                 <h3>1072</h3>
-                                <span class="widget-title2">Patients <i class="fa fa-check" aria-hidden="true"></i></span>
+                                <span class="widget-title2">Pacientes <i class="fa fa-check" aria-hidden="true"></i></span>
                             </div>
                         </div>
                     </div>
@@ -331,7 +333,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-md-6 col-sm-6 col-lg-6 col-xl-3">
+                    <!--<div class="col-md-6 col-sm-6 col-lg-6 col-xl-3">
                         <div class="dash-widget">
                             <span class="dash-widget-bg4"><i class="fa fa-heartbeat" aria-hidden="true"></i></span>
                             <div class="dash-widget-info text-right">
@@ -339,8 +341,11 @@
                                 <span class="widget-title4">Pending <i class="fa fa-check" aria-hidden="true"></i></span>
                             </div>
                         </div>
-                    </div>
+                    </div>-->
                 </div>
+                <!-- FIN CUADROS INFORMATIVOS -->
+
+                <!-- CUADROS ESTADISTICOS
 				<div class="row">
 					<div class="col-12 col-md-6 col-lg-6 col-xl-6">
 						<div class="card">
@@ -370,6 +375,9 @@
 						</div>
 					</div>
 				</div>
+                FIN CUADROS ESTADISTICOS -->
+
+                <!-- LISTA PROXIMAS CITAS Y PERSONAL DE SALUD
 				<div class="row">
 					<div class="col-12 col-md-6 col-lg-8 col-xl-8">
 						<div class="card">
@@ -560,11 +568,14 @@
                         </div>
                     </div>
 				</div>
+                FIN LISTA CITAS Y PERSONAL DE SALUD-->
+
+                <!-- LISTA PACIENTES NUEVEOS -->
 				<div class="row">
 					<div class="col-12 col-md-6 col-lg-8 col-xl-8">
 						<div class="card">
 							<div class="card-header">
-								<h4 class="card-title d-inline-block">New Patients </h4> <a href="patients.html" class="btn btn-primary float-right">View all</a>
+								<h4 class="card-title d-inline-block">Pacientes Nuevos </h4> <a href="patients.html" class="btn btn-primary float-right">View all</a>
 							</div>
 							<div class="card-block">
 								<div class="table-responsive">
@@ -612,6 +623,7 @@
 							</div>
 						</div>
 					</div>
+                    <!--
 					<div class="col-12 col-md-6 col-lg-4 col-xl-4">
 						<div class="hospital-barchart">
 							<h4 class="card-title d-inline-block">Hospital Management</h4>
@@ -676,8 +688,13 @@
 							</div>
 						</div>
 					 </div>
+                    -->
 				</div>
+                <!-- FIN LISTA PACIENTES NUEVOS -->
+
             </div>
+
+            <!-- PANEL NOTIFICACIONES
             <div class="notification-box">
                 <div class="msg-sidebar notifications msg-noti">
                     <div class="topnav-dropdown-header">
@@ -887,6 +904,8 @@
                     </div>
                 </div>
             </div>
+            FIN PANEL NOTIFICACIONES -->
+
         </div>
         <!-- FIN PRINCIPAL SECTION -->
 
