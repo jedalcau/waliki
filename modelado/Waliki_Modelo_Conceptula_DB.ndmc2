@@ -1,0 +1,967 @@
+{
+  "paper": {
+    "name": "A4",
+    "leftMargin": 0.5,
+    "rightMargin": 0.5,
+    "topMargin": 0.5,
+    "bottomMargin": 0.5,
+    "isPortriat": false
+  },
+  "modelVersion": 2.01,
+  "defaultSchema": "default",
+  "server": {
+    "objectType": "Server_CONCEPTUAL",
+    "name": "Default",
+    "schemas": [
+      {
+        "objectType": "Schema_CONCEPTUAL",
+        "name": "default",
+        "tables": [
+          {
+            "objectType": "Table_CONCEPTUAL",
+            "name": "Paciente",
+            "oldName": "",
+            "foreignKeys": [
+              {
+                "objectType": "ForeignKey_CONCEPTUAL",
+                "name": "fk_Paciente_Referencia_1",
+                "referencedSchema": "default",
+                "referencedTable": "Referencia",
+                "sourceCardinality": "NoneRelationship",
+                "targetCardinality": "NoneRelationship",
+                "oldName": ""
+              },
+              {
+                "objectType": "ForeignKey_CONCEPTUAL",
+                "name": "fk_Paciente_Historia Clinica_1",
+                "referencedSchema": "default",
+                "referencedTable": "Historia Clinica",
+                "sourceCardinality": "NoneRelationship",
+                "targetCardinality": "NoneRelationship",
+                "oldName": ""
+              },
+              {
+                "objectType": "ForeignKey_CONCEPTUAL",
+                "name": "fk_Paciente_Citas_1",
+                "referencedSchema": "default",
+                "referencedTable": "Citas",
+                "sourceCardinality": "NoneRelationship",
+                "targetCardinality": "NoneRelationship",
+                "oldName": ""
+              }
+            ]
+          },
+          {
+            "objectType": "Table_CONCEPTUAL",
+            "name": "Citas",
+            "oldName": "",
+            "foreignKeys": []
+          },
+          {
+            "objectType": "Table_CONCEPTUAL",
+            "name": "Consultorio",
+            "oldName": "",
+            "foreignKeys": [
+              {
+                "objectType": "ForeignKey_CONCEPTUAL",
+                "name": "fk_Consultorio_Citas_1",
+                "referencedSchema": "default",
+                "referencedTable": "Citas",
+                "sourceCardinality": "NoneRelationship",
+                "targetCardinality": "NoneRelationship",
+                "oldName": ""
+              }
+            ]
+          },
+          {
+            "objectType": "Table_CONCEPTUAL",
+            "name": "Historia Clinica",
+            "oldName": "",
+            "foreignKeys": [
+              {
+                "objectType": "ForeignKey_CONCEPTUAL",
+                "name": "fk_Historia Clinica_Consultorio_1",
+                "referencedSchema": "default",
+                "referencedTable": "Consultorio",
+                "sourceCardinality": "NoneRelationship",
+                "targetCardinality": "NoneRelationship",
+                "oldName": ""
+              }
+            ]
+          },
+          {
+            "objectType": "Table_CONCEPTUAL",
+            "name": "Personal de Salud",
+            "oldName": "",
+            "foreignKeys": [
+              {
+                "objectType": "ForeignKey_CONCEPTUAL",
+                "name": "fk_Personal de Salud_Citas_1",
+                "referencedSchema": "default",
+                "referencedTable": "Citas",
+                "sourceCardinality": "NoneRelationship",
+                "targetCardinality": "NoneRelationship",
+                "oldName": ""
+              }
+            ]
+          },
+          {
+            "objectType": "Table_CONCEPTUAL",
+            "name": "Empleado",
+            "oldName": "",
+            "foreignKeys": []
+          },
+          {
+            "objectType": "Table_CONCEPTUAL",
+            "name": "Referencia",
+            "oldName": "",
+            "foreignKeys": [
+              {
+                "objectType": "ForeignKey_CONCEPTUAL",
+                "name": "fk_Referencia_Citas_1",
+                "referencedSchema": "default",
+                "referencedTable": "Citas",
+                "sourceCardinality": "NoneRelationship",
+                "targetCardinality": "NoneRelationship",
+                "oldName": ""
+              }
+            ]
+          },
+          {
+            "objectType": "Table_CONCEPTUAL",
+            "name": "Cargo",
+            "oldName": "",
+            "foreignKeys": [
+              {
+                "objectType": "ForeignKey_CONCEPTUAL",
+                "name": "fk_Cargo_Empleado_1",
+                "referencedSchema": "default",
+                "referencedTable": "Empleado",
+                "sourceCardinality": "NoneRelationship",
+                "targetCardinality": "NoneRelationship",
+                "oldName": ""
+              }
+            ]
+          },
+          {
+            "objectType": "Table_CONCEPTUAL",
+            "name": "Asistencia",
+            "oldName": "",
+            "foreignKeys": [
+              {
+                "objectType": "ForeignKey_CONCEPTUAL",
+                "name": "fk_Licencias_Empleado_1",
+                "referencedSchema": "default",
+                "referencedTable": "Empleado",
+                "sourceCardinality": "NoneRelationship",
+                "targetCardinality": "NoneRelationship",
+                "oldName": ""
+              }
+            ]
+          },
+          {
+            "objectType": "Table_CONCEPTUAL",
+            "name": "Licencia",
+            "oldName": "",
+            "foreignKeys": [
+              {
+                "objectType": "ForeignKey_CONCEPTUAL",
+                "name": "fk_Licencia_Empleado_1",
+                "referencedSchema": "default",
+                "referencedTable": "Empleado",
+                "sourceCardinality": "NoneRelationship",
+                "targetCardinality": "NoneRelationship",
+                "oldName": ""
+              }
+            ]
+          },
+          {
+            "objectType": "Table_CONCEPTUAL",
+            "name": "Tipo Licencia",
+            "oldName": "",
+            "foreignKeys": [
+              {
+                "objectType": "ForeignKey_CONCEPTUAL",
+                "name": "fk_Tipo Licencia_Licencia_1",
+                "referencedSchema": "default",
+                "referencedTable": "Licencia",
+                "sourceCardinality": "NoneRelationship",
+                "targetCardinality": "NoneRelationship",
+                "oldName": ""
+              }
+            ]
+          },
+          {
+            "objectType": "Table_CONCEPTUAL",
+            "name": "Horario",
+            "oldName": "",
+            "foreignKeys": [
+              {
+                "objectType": "ForeignKey_CONCEPTUAL",
+                "name": "fk_Horario_Personal de Salud_1",
+                "referencedSchema": "default",
+                "referencedTable": "Personal de Salud",
+                "sourceCardinality": "NoneRelationship",
+                "targetCardinality": "NoneRelationship",
+                "oldName": ""
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "diagrams": [
+    {
+      "name": "Diagram 1",
+      "paperWidth": 1,
+      "paperHeight": 1,
+      "tableFont": "Arial Unicode MS",
+      "tableFontSize": 14,
+      "isBalckWhite": false,
+      "showDBSchemaName": false,
+      "showViewRelations": true,
+      "notation": "xml",
+      "showFieldComment": false,
+      "showTableComment": false,
+      "shapes": [
+        {
+          "type": "table",
+          "schemaName": "default",
+          "tableName": "Paciente",
+          "x": 1170,
+          "y": 430,
+          "width": 150,
+          "height": 80,
+          "isBold": false,
+          "titleColor": {
+            "r": 55,
+            "g": 131,
+            "b": 192,
+            "a": 1
+          }
+        },
+        {
+          "type": "table",
+          "schemaName": "default",
+          "tableName": "Citas",
+          "x": 800,
+          "y": 750,
+          "width": 150,
+          "height": 80,
+          "isBold": false,
+          "titleColor": {
+            "r": 55,
+            "g": 131,
+            "b": 192,
+            "a": 1
+          }
+        },
+        {
+          "type": "table",
+          "schemaName": "default",
+          "tableName": "Consultorio",
+          "x": 800,
+          "y": 550,
+          "width": 150,
+          "height": 80,
+          "isBold": false,
+          "titleColor": {
+            "r": 55,
+            "g": 131,
+            "b": 192,
+            "a": 1
+          }
+        },
+        {
+          "type": "table",
+          "schemaName": "default",
+          "tableName": "Historia Clinica",
+          "x": 800,
+          "y": 370,
+          "width": 150,
+          "height": 80,
+          "isBold": false,
+          "titleColor": {
+            "r": 55,
+            "g": 131,
+            "b": 192,
+            "a": 1
+          }
+        },
+        {
+          "type": "table",
+          "schemaName": "default",
+          "tableName": "Personal de Salud",
+          "x": 330,
+          "y": 830,
+          "width": 150,
+          "height": 80,
+          "isBold": false,
+          "titleColor": {
+            "r": 55,
+            "g": 131,
+            "b": 192,
+            "a": 1
+          }
+        },
+        {
+          "type": "table",
+          "schemaName": "default",
+          "tableName": "Empleado",
+          "x": 330,
+          "y": 490,
+          "width": 150,
+          "height": 80,
+          "isBold": false,
+          "titleColor": {
+            "r": 55,
+            "g": 131,
+            "b": 192,
+            "a": 1
+          }
+        },
+        {
+          "type": "table",
+          "schemaName": "default",
+          "tableName": "Referencia",
+          "x": 800,
+          "y": 160,
+          "width": 150,
+          "height": 80,
+          "isBold": false,
+          "titleColor": {
+            "r": 55,
+            "g": 131,
+            "b": 192,
+            "a": 1
+          }
+        },
+        {
+          "type": "table",
+          "schemaName": "default",
+          "tableName": "Licencia",
+          "x": 490,
+          "y": 220,
+          "width": 150,
+          "height": 80,
+          "isBold": false,
+          "titleColor": {
+            "r": 55,
+            "g": 131,
+            "b": 192,
+            "a": 1
+          }
+        },
+        {
+          "type": "table",
+          "schemaName": "default",
+          "tableName": "Cargo",
+          "x": 490,
+          "y": 340,
+          "width": 150,
+          "height": 80,
+          "isBold": false,
+          "titleColor": {
+            "r": 55,
+            "g": 131,
+            "b": 192,
+            "a": 1
+          }
+        },
+        {
+          "type": "table",
+          "schemaName": "default",
+          "tableName": "Asistencia",
+          "x": 220,
+          "y": 340,
+          "width": 150,
+          "height": 80,
+          "isBold": false,
+          "titleColor": {
+            "r": 55,
+            "g": 131,
+            "b": 192,
+            "a": 1
+          }
+        },
+        {
+          "type": "table",
+          "schemaName": "default",
+          "tableName": "Tipo Licencia",
+          "x": 490,
+          "y": 110,
+          "width": 150,
+          "height": 80,
+          "isBold": false,
+          "titleColor": {
+            "r": 55,
+            "g": 131,
+            "b": 192,
+            "a": 1
+          }
+        },
+        {
+          "type": "table",
+          "schemaName": "default",
+          "tableName": "Horario",
+          "x": 330,
+          "y": 660,
+          "width": 150,
+          "height": 80,
+          "isBold": false,
+          "titleColor": {
+            "r": 55,
+            "g": 131,
+            "b": 192,
+            "a": 1
+          }
+        }
+      ],
+      "layers": [
+        {
+          "name": "Paciente",
+          "x": 1100,
+          "y": 80,
+          "width": 300,
+          "height": 870,
+          "layerColor": {
+            "r": 100,
+            "g": 234,
+            "b": 136,
+            "a": 1
+          },
+          "fontName": "Arial Unicode MS",
+          "fontSize": 14,
+          "fontColor": {
+            "r": 51,
+            "g": 51,
+            "b": 51,
+            "a": 1
+          }
+        },
+        {
+          "name": "Personal de Salud",
+          "x": 190,
+          "y": 80,
+          "width": 480,
+          "height": 870,
+          "layerColor": {
+            "r": 133,
+            "g": 17,
+            "b": 238,
+            "a": 1
+          },
+          "fontName": "Arial Unicode MS",
+          "fontSize": 14,
+          "fontColor": {
+            "r": 51,
+            "g": 51,
+            "b": 51,
+            "a": 1
+          }
+        },
+        {
+          "name": "Historia Clinica",
+          "x": 670,
+          "y": 80,
+          "width": 430,
+          "height": 870,
+          "layerColor": {
+            "r": 255,
+            "g": 255,
+            "b": 132,
+            "a": 1
+          },
+          "fontName": "Arial Unicode MS",
+          "fontSize": 14,
+          "fontColor": {
+            "r": 51,
+            "g": 51,
+            "b": 51,
+            "a": 1
+          }
+        }
+      ],
+      "relations": [
+        {
+          "name": "fk_Personal de Salud_Citas_1",
+          "sourceTableName": "Personal de Salud",
+          "sourceSchemaName": "default",
+          "lineWidth": 1,
+          "visible": true,
+          "vertices": [
+            {
+              "x": 495,
+              "y": 870
+            },
+            {
+              "x": 880,
+              "y": 870
+            },
+            {
+              "x": 880,
+              "y": 845
+            }
+          ],
+          "label": {
+            "x": 485,
+            "y": 832,
+            "width": 198,
+            "height": 30,
+            "fontName": "Arial Unicode MS",
+            "fontSize": 14,
+            "fontColor": {
+              "r": 204,
+              "g": 204,
+              "b": 204,
+              "a": 1
+            },
+            "isFontBold": false,
+            "isFontItalic": false,
+            "isVisible": false
+          }
+        },
+        {
+          "name": "fk_Licencias_Empleado_1",
+          "sourceTableName": "Asistencia",
+          "sourceSchemaName": "default",
+          "lineWidth": 1,
+          "visible": true,
+          "vertices": [
+            {
+              "x": 290,
+              "y": 435
+            },
+            {
+              "x": 290,
+              "y": 530
+            },
+            {
+              "x": 315,
+              "y": 530
+            }
+          ],
+          "label": {
+            "x": 292,
+            "y": 385,
+            "width": 174,
+            "height": 30,
+            "fontName": "Arial Unicode MS",
+            "fontSize": 14,
+            "fontColor": {
+              "r": 204,
+              "g": 204,
+              "b": 204,
+              "a": 1
+            },
+            "isFontBold": false,
+            "isFontItalic": false,
+            "isVisible": false
+          }
+        },
+        {
+          "name": "fk_Tipo Licencia_Licencia_1",
+          "sourceTableName": "Tipo Licencia",
+          "sourceSchemaName": "default",
+          "lineWidth": 1,
+          "visible": true,
+          "vertices": [
+            {
+              "x": 570,
+              "y": 205
+            },
+            {
+              "x": 570,
+              "y": 220
+            },
+            {
+              "x": 570,
+              "y": 220
+            },
+            {
+              "x": 570,
+              "y": 205
+            }
+          ],
+          "label": {
+            "x": 578,
+            "y": 195,
+            "width": 188,
+            "height": 30,
+            "fontName": "Arial Unicode MS",
+            "fontSize": 14,
+            "fontColor": {
+              "r": 204,
+              "g": 204,
+              "b": 204,
+              "a": 1
+            },
+            "isFontBold": false,
+            "isFontItalic": false,
+            "isVisible": false
+          }
+        },
+        {
+          "name": "fk_Horario_Personal de Salud_1",
+          "sourceTableName": "Horario",
+          "sourceSchemaName": "default",
+          "lineWidth": 1,
+          "visible": true,
+          "vertices": [
+            {
+              "x": 410,
+              "y": 755
+            },
+            {
+              "x": 410,
+              "y": 750
+            },
+            {
+              "x": 410,
+              "y": 750
+            },
+            {
+              "x": 410,
+              "y": 815
+            }
+          ],
+          "label": {
+            "x": 418,
+            "y": 745,
+            "width": 217,
+            "height": 30,
+            "fontName": "Arial Unicode MS",
+            "fontSize": 14,
+            "fontColor": {
+              "r": 204,
+              "g": 204,
+              "b": 204,
+              "a": 1
+            },
+            "isFontBold": false,
+            "isFontItalic": false,
+            "isVisible": false
+          }
+        },
+        {
+          "name": "fk_Cargo_Empleado_1",
+          "sourceTableName": "Cargo",
+          "sourceSchemaName": "default",
+          "lineWidth": 1,
+          "visible": true,
+          "vertices": [
+            {
+              "x": 475,
+              "y": 380
+            },
+            {
+              "x": 440,
+              "y": 380
+            },
+            {
+              "x": 440,
+              "y": 475
+            }
+          ],
+          "label": {
+            "x": 331,
+            "y": 342,
+            "width": 154,
+            "height": 30,
+            "fontName": "Arial Unicode MS",
+            "fontSize": 14,
+            "fontColor": {
+              "r": 204,
+              "g": 204,
+              "b": 204,
+              "a": 1
+            },
+            "isFontBold": false,
+            "isFontItalic": false,
+            "isVisible": false
+          }
+        },
+        {
+          "name": "fk_Licencia_Empleado_1",
+          "sourceTableName": "Licencia",
+          "sourceSchemaName": "default",
+          "lineWidth": 1,
+          "visible": true,
+          "vertices": [
+            {
+              "x": 475,
+              "y": 260
+            },
+            {
+              "x": 400,
+              "y": 260
+            },
+            {
+              "x": 400,
+              "y": 475
+            }
+          ],
+          "label": {
+            "x": 317,
+            "y": 222,
+            "width": 168,
+            "height": 30,
+            "fontName": "Arial Unicode MS",
+            "fontSize": 14,
+            "fontColor": {
+              "r": 204,
+              "g": 204,
+              "b": 204,
+              "a": 1
+            },
+            "isFontBold": false,
+            "isFontItalic": false,
+            "isVisible": false
+          }
+        },
+        {
+          "name": "fk_Paciente_Referencia_1",
+          "sourceTableName": "Paciente",
+          "sourceSchemaName": "default",
+          "lineWidth": 1,
+          "visible": true,
+          "vertices": [
+            {
+              "x": 1250,
+              "y": 415
+            },
+            {
+              "x": 1250,
+              "y": 200
+            },
+            {
+              "x": 965,
+              "y": 200
+            }
+          ],
+          "label": {
+            "x": 1078,
+            "y": 385,
+            "width": 174,
+            "height": 30,
+            "fontName": "Arial Unicode MS",
+            "fontSize": 14,
+            "fontColor": {
+              "r": 204,
+              "g": 204,
+              "b": 204,
+              "a": 1
+            },
+            "isFontBold": false,
+            "isFontItalic": false,
+            "isVisible": false
+          }
+        },
+        {
+          "name": "fk_Paciente_Historia Clinica_1",
+          "sourceTableName": "Paciente",
+          "sourceSchemaName": "default",
+          "lineWidth": 1,
+          "visible": true,
+          "vertices": [
+            {
+              "x": 1155,
+              "y": 470
+            },
+            {
+              "x": 910,
+              "y": 470
+            },
+            {
+              "x": 910,
+              "y": 465
+            }
+          ],
+          "label": {
+            "x": 961,
+            "y": 432,
+            "width": 204,
+            "height": 30,
+            "fontName": "Arial Unicode MS",
+            "fontSize": 14,
+            "fontColor": {
+              "r": 204,
+              "g": 204,
+              "b": 204,
+              "a": 1
+            },
+            "isFontBold": false,
+            "isFontItalic": false,
+            "isVisible": false
+          }
+        },
+        {
+          "name": "fk_Paciente_Citas_1",
+          "sourceTableName": "Paciente",
+          "sourceSchemaName": "default",
+          "lineWidth": 1,
+          "visible": true,
+          "vertices": [
+            {
+              "x": 1250,
+              "y": 525
+            },
+            {
+              "x": 1250,
+              "y": 790
+            },
+            {
+              "x": 965,
+              "y": 790
+            }
+          ],
+          "label": {
+            "x": 1117,
+            "y": 475,
+            "width": 135,
+            "height": 30,
+            "fontName": "Arial Unicode MS",
+            "fontSize": 14,
+            "fontColor": {
+              "r": 204,
+              "g": 204,
+              "b": 204,
+              "a": 1
+            },
+            "isFontBold": false,
+            "isFontItalic": false,
+            "isVisible": false
+          }
+        },
+        {
+          "name": "fk_Consultorio_Citas_1",
+          "sourceTableName": "Consultorio",
+          "sourceSchemaName": "default",
+          "lineWidth": 1,
+          "visible": true,
+          "vertices": [
+            {
+              "x": 880,
+              "y": 645
+            },
+            {
+              "x": 880,
+              "y": 690
+            },
+            {
+              "x": 880,
+              "y": 690
+            },
+            {
+              "x": 880,
+              "y": 735
+            }
+          ],
+          "label": {
+            "x": 888,
+            "y": 605,
+            "width": 156,
+            "height": 30,
+            "fontName": "Arial Unicode MS",
+            "fontSize": 14,
+            "fontColor": {
+              "r": 204,
+              "g": 204,
+              "b": 204,
+              "a": 1
+            },
+            "isFontBold": false,
+            "isFontItalic": false,
+            "isVisible": false
+          }
+        },
+        {
+          "name": "fk_Historia Clinica_Consultorio_1",
+          "sourceTableName": "Historia Clinica",
+          "sourceSchemaName": "default",
+          "lineWidth": 1,
+          "visible": true,
+          "vertices": [
+            {
+              "x": 870,
+              "y": 465
+            },
+            {
+              "x": 870,
+              "y": 500
+            },
+            {
+              "x": 870,
+              "y": 535
+            }
+          ],
+          "label": {
+            "x": 878,
+            "y": 425,
+            "width": 225,
+            "height": 30,
+            "fontName": "Arial Unicode MS",
+            "fontSize": 14,
+            "fontColor": {
+              "r": 204,
+              "g": 204,
+              "b": 204,
+              "a": 1
+            },
+            "isFontBold": false,
+            "isFontItalic": false,
+            "isVisible": false
+          }
+        },
+        {
+          "name": "fk_Referencia_Citas_1",
+          "sourceTableName": "Referencia",
+          "sourceSchemaName": "default",
+          "lineWidth": 1,
+          "visible": true,
+          "vertices": [
+            {
+              "x": 785,
+              "y": 200
+            },
+            {
+              "x": 750,
+              "y": 200
+            },
+            {
+              "x": 750,
+              "y": 440
+            },
+            {
+              "x": 750,
+              "y": 770
+            },
+            {
+              "x": 785,
+              "y": 770
+            }
+          ],
+          "label": {
+            "x": 801,
+            "y": 172,
+            "width": 149,
+            "height": 30,
+            "fontName": "Arial Unicode MS",
+            "fontSize": 14,
+            "fontColor": {
+              "r": 204,
+              "g": 204,
+              "b": 204,
+              "a": 1
+            },
+            "isFontBold": false,
+            "isFontItalic": false,
+            "isVisible": false
+          }
+        }
+      ],
+      "viewRelations": []
+    }
+  ]
+}
