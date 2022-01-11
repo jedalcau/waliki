@@ -156,9 +156,51 @@
     <packagedElement xmi:type="uml:Package" xmi:id="_jsCg4HDQEey6nMQA0TH5hA" name="Entidades de Negocio">
       <eAnnotations xmi:id="_jsCg4XDQEey6nMQA0TH5hA" source="uml2.diagrams" references="_jsCg4nDQEey6nMQA0TH5hA">
         <contents xmi:type="umlnotation:UMLDiagram" xmi:id="_jsCg4nDQEey6nMQA0TH5hA" type="Freeform" name="Principal_EN">
+          <children xmi:type="umlnotation:UMLShape" xmi:id="_fscM4HDSEey6nMQA0TH5hA" element="_fNaHgHDSEey6nMQA0TH5hA" fontName="Segoe UI" fontHeight="8" transparency="0" lineColor="14263149" lineWidth="1" showStereotype="Label">
+            <children xmi:type="notation:DecorationNode" xmi:id="_fscM4nDSEey6nMQA0TH5hA" type="ImageCompartment">
+              <layoutConstraint xmi:type="notation:Size" xmi:id="_fscM43DSEey6nMQA0TH5hA" width="1320" height="1320"/>
+            </children>
+            <children xmi:type="notation:BasicDecorationNode" xmi:id="_fscM5HDSEey6nMQA0TH5hA" type="Stereotype"/>
+            <children xmi:type="notation:BasicDecorationNode" xmi:id="_fscz8HDSEey6nMQA0TH5hA" type="Name"/>
+            <children xmi:type="notation:BasicDecorationNode" xmi:id="_fscz8XDSEey6nMQA0TH5hA" type="Parent"/>
+            <children xmi:type="notation:SemanticListCompartment" xmi:id="_fscz8nDSEey6nMQA0TH5hA" type="AttributeCompartment"/>
+            <children xmi:type="notation:SemanticListCompartment" xmi:id="_fscz83DSEey6nMQA0TH5hA" type="OperationCompartment"/>
+            <children xmi:type="notation:SemanticListCompartment" xmi:id="_fscz9HDSEey6nMQA0TH5hA" visible="false" type="SignalCompartment"/>
+            <children xmi:type="umlnotation:UMLShapeCompartment" xmi:id="_fscz9XDSEey6nMQA0TH5hA" visible="false" type="StructureCompartment"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_fscM4XDSEey6nMQA0TH5hA" x="2376" y="2640"/>
+          </children>
+          <children xmi:type="umlnotation:UMLShape" xmi:id="_ChUhEHDTEey6nMQA0TH5hA" element="_COrR4HDTEey6nMQA0TH5hA" fontName="Segoe UI" fontHeight="8" transparency="0" lineColor="14263149" lineWidth="1" showStereotype="Label">
+            <children xmi:type="notation:DecorationNode" xmi:id="_ChVIIHDTEey6nMQA0TH5hA" type="ImageCompartment">
+              <layoutConstraint xmi:type="notation:Size" xmi:id="_ChVIIXDTEey6nMQA0TH5hA" width="1320" height="1320"/>
+            </children>
+            <children xmi:type="notation:BasicDecorationNode" xmi:id="_ChVIInDTEey6nMQA0TH5hA" type="Stereotype"/>
+            <children xmi:type="notation:BasicDecorationNode" xmi:id="_ChVII3DTEey6nMQA0TH5hA" type="Name"/>
+            <children xmi:type="notation:BasicDecorationNode" xmi:id="_ChVIJHDTEey6nMQA0TH5hA" type="Parent"/>
+            <children xmi:type="notation:SemanticListCompartment" xmi:id="_ChVIJXDTEey6nMQA0TH5hA" type="AttributeCompartment"/>
+            <children xmi:type="notation:SemanticListCompartment" xmi:id="_ChVIJnDTEey6nMQA0TH5hA" type="OperationCompartment"/>
+            <children xmi:type="notation:SemanticListCompartment" xmi:id="_ChVvMHDTEey6nMQA0TH5hA" visible="false" type="SignalCompartment"/>
+            <children xmi:type="umlnotation:UMLShapeCompartment" xmi:id="_ChVvMXDTEey6nMQA0TH5hA" visible="false" type="StructureCompartment"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_ChUhEXDTEey6nMQA0TH5hA" x="14124" y="2508"/>
+          </children>
+          <children xmi:type="umlnotation:UMLShape" xmi:id="_IETogHDTEey6nMQA0TH5hA" element="_H7RoUHDTEey6nMQA0TH5hA" fontName="Segoe UI" fontHeight="8" transparency="0" lineColor="14263149" lineWidth="1" showStereotype="Label">
+            <children xmi:type="notation:DecorationNode" xmi:id="_IETognDTEey6nMQA0TH5hA" type="ImageCompartment">
+              <layoutConstraint xmi:type="notation:Size" xmi:id="_IETog3DTEey6nMQA0TH5hA" width="1320" height="1320"/>
+            </children>
+            <children xmi:type="notation:BasicDecorationNode" xmi:id="_IETohHDTEey6nMQA0TH5hA" type="Stereotype"/>
+            <children xmi:type="notation:BasicDecorationNode" xmi:id="_IETohXDTEey6nMQA0TH5hA" type="Name"/>
+            <children xmi:type="notation:BasicDecorationNode" xmi:id="_IETohnDTEey6nMQA0TH5hA" type="Parent"/>
+            <children xmi:type="notation:SemanticListCompartment" xmi:id="_IEUPkHDTEey6nMQA0TH5hA" type="AttributeCompartment"/>
+            <children xmi:type="notation:SemanticListCompartment" xmi:id="_IEUPkXDTEey6nMQA0TH5hA" type="OperationCompartment"/>
+            <children xmi:type="notation:SemanticListCompartment" xmi:id="_IEUPknDTEey6nMQA0TH5hA" visible="false" type="SignalCompartment"/>
+            <children xmi:type="umlnotation:UMLShapeCompartment" xmi:id="_IEUPk3DTEey6nMQA0TH5hA" visible="false" type="StructureCompartment"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_IETogXDTEey6nMQA0TH5hA" x="2244" y="6468"/>
+          </children>
           <element xsi:nil="true"/>
         </contents>
       </eAnnotations>
+      <packagedElement xmi:type="uml:Class" xmi:id="_fNaHgHDSEey6nMQA0TH5hA" name="EN1_Historia Clinica"/>
+      <packagedElement xmi:type="uml:Class" xmi:id="_COrR4HDTEey6nMQA0TH5hA" name="EN2_Receta Medica"/>
+      <packagedElement xmi:type="uml:Class" xmi:id="_H7RoUHDTEey6nMQA0TH5hA" name="EN3_Reporte de Pacientes"/>
     </packagedElement>
     <packagedElement xmi:type="uml:Package" xmi:id="_kr-68HDQEey6nMQA0TH5hA" name="Trabajadores de Negocio">
       <eAnnotations xmi:id="_kr-68XDQEey6nMQA0TH5hA" source="uml2.diagrams" references="_kr-68nDQEey6nMQA0TH5hA">
@@ -291,4 +333,7 @@
   <BusinessModeling:BusinessWorker xmi:id="_AeR9MHDREey6nMQA0TH5hA" base_Class="__g0PYHDQEey6nMQA0TH5hA"/>
   <BusinessModeling:BusinessWorker xmi:id="_Cvi1MHDREey6nMQA0TH5hA" base_Class="_CiGPEHDREey6nMQA0TH5hA"/>
   <BusinessModeling:BusinessUseCaseRealization xmi:id="_FVH64HDSEey6nMQA0TH5hA" base_Collaboration="_-dq64HDREey6nMQA0TH5hA"/>
+  <BusinessModeling:BusinessEntity xmi:id="_fsa-wHDSEey6nMQA0TH5hA" base_Class="_fNaHgHDSEey6nMQA0TH5hA"/>
+  <BusinessModeling:BusinessEntity xmi:id="_ChT6AHDTEey6nMQA0TH5hA" base_Class="_COrR4HDTEey6nMQA0TH5hA"/>
+  <BusinessModeling:BusinessEntity xmi:id="_IETBcHDTEey6nMQA0TH5hA" base_Class="_H7RoUHDTEey6nMQA0TH5hA"/>
 </xmi:XMI>

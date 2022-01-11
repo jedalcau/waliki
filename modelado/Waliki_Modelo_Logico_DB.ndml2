@@ -1,0 +1,3584 @@
+{
+  "paper": {
+    "name": "A4",
+    "leftMargin": 0.5,
+    "rightMargin": 0.5,
+    "topMargin": 0.5,
+    "bottomMargin": 0.5,
+    "isPortriat": false
+  },
+  "modelVersion": 2.01,
+  "defaultSchema": "default",
+  "server": {
+    "objectType": "Server_LOGICAL",
+    "name": "Default",
+    "schemas": [
+      {
+        "objectType": "Schema_LOGICAL",
+        "name": "default",
+        "tables": [
+          {
+            "objectType": "Table_LOGICAL",
+            "name": "hospital.citas",
+            "comment": "",
+            "oldName": "citas",
+            "fields": [
+              {
+                "objectType": "TableField_LOGICAL",
+                "name": "idcitas",
+                "type": "INTEGER",
+                "length": 11,
+                "decimals": -2147483648,
+                "isNullable": false,
+                "defaultType": "Others",
+                "defaultValue": "",
+                "comment": "",
+                "oldName": "idcitas"
+              },
+              {
+                "objectType": "TableField_LOGICAL",
+                "name": "codcita",
+                "type": "NATIONAL CHARACTER VARYING",
+                "length": 20,
+                "decimals": -2147483648,
+                "isNullable": false,
+                "defaultType": "Others",
+                "defaultValue": "",
+                "comment": "",
+                "oldName": "codcita"
+              },
+              {
+                "objectType": "TableField_LOGICAL",
+                "name": "idpaciente",
+                "type": "INTEGER",
+                "length": 11,
+                "decimals": -2147483648,
+                "isNullable": false,
+                "defaultType": "Others",
+                "defaultValue": "",
+                "comment": "",
+                "oldName": "idpaciente"
+              },
+              {
+                "objectType": "TableField_LOGICAL",
+                "name": "idconsultorio",
+                "type": "INTEGER",
+                "length": 11,
+                "decimals": -2147483648,
+                "isNullable": false,
+                "defaultType": "Others",
+                "defaultValue": "",
+                "comment": "",
+                "oldName": "idconsultorio"
+              },
+              {
+                "objectType": "TableField_LOGICAL",
+                "name": "iddoctor",
+                "type": "INTEGER",
+                "length": 11,
+                "decimals": -2147483648,
+                "isNullable": false,
+                "defaultType": "Others",
+                "defaultValue": "",
+                "comment": "",
+                "oldName": "iddoctor"
+              },
+              {
+                "objectType": "TableField_LOGICAL",
+                "name": "fecha",
+                "type": "NATIONAL CHARACTER VARYING",
+                "length": 12,
+                "decimals": -2147483648,
+                "isNullable": false,
+                "defaultType": "Others",
+                "defaultValue": "",
+                "comment": "",
+                "oldName": "fecha"
+              },
+              {
+                "objectType": "TableField_LOGICAL",
+                "name": "hora",
+                "type": "NATIONAL CHARACTER VARYING",
+                "length": 15,
+                "decimals": -2147483648,
+                "isNullable": false,
+                "defaultType": "Others",
+                "defaultValue": "",
+                "comment": "",
+                "oldName": "hora"
+              },
+              {
+                "objectType": "TableField_LOGICAL",
+                "name": "emailpac",
+                "type": "NATIONAL CHARACTER VARYING",
+                "length": 150,
+                "decimals": -2147483648,
+                "isNullable": true,
+                "defaultType": "Null",
+                "defaultValue": "",
+                "comment": "",
+                "oldName": "emailpac"
+              },
+              {
+                "objectType": "TableField_LOGICAL",
+                "name": "telefono",
+                "type": "NATIONAL CHARACTER VARYING",
+                "length": 50,
+                "decimals": -2147483648,
+                "isNullable": true,
+                "defaultType": "Null",
+                "defaultValue": "",
+                "comment": "",
+                "oldName": "telefono"
+              },
+              {
+                "objectType": "TableField_LOGICAL",
+                "name": "mensaje",
+                "type": "NATIONAL CHARACTER VARYING",
+                "length": 255,
+                "decimals": -2147483648,
+                "isNullable": true,
+                "defaultType": "Null",
+                "defaultValue": "",
+                "comment": "",
+                "oldName": "mensaje"
+              },
+              {
+                "objectType": "TableField_LOGICAL",
+                "name": "feccreate",
+                "type": "TIMESTAMP",
+                "length": -2147483648,
+                "decimals": -2147483648,
+                "isNullable": true,
+                "defaultType": "Null",
+                "defaultValue": "",
+                "comment": "",
+                "oldName": "feccreate"
+              },
+              {
+                "objectType": "TableField_LOGICAL",
+                "name": "status",
+                "type": "BIT",
+                "length": 1,
+                "decimals": -2147483648,
+                "isNullable": true,
+                "defaultType": "Null",
+                "defaultValue": "",
+                "comment": "",
+                "oldName": "status"
+              },
+              {
+                "objectType": "TableField_LOGICAL",
+                "name": "idreferencia",
+                "type": "INTEGER",
+                "length": 11,
+                "decimals": -2147483648,
+                "isNullable": true,
+                "defaultType": "Null",
+                "defaultValue": "",
+                "comment": "",
+                "oldName": "idreferencia"
+              }
+            ],
+            "foreignKeys": [
+              {
+                "objectType": "ForeignKey_LOGICAL",
+                "name": "fk_citas_consultorio",
+                "fields": [
+                  "idconsultorio"
+                ],
+                "referencedSchema": "",
+                "referencedTable": "hospital.consultorio",
+                "referencedFields": [
+                  "idconsultorio"
+                ],
+                "sourceCardinality": "ZeroOrManyRelationship",
+                "targetCardinality": "OneAndOnlyOneRelationship",
+                "comment": "",
+                "oldName": "fk_citas_consultorio"
+              },
+              {
+                "objectType": "ForeignKey_LOGICAL",
+                "name": "fk_citas_doctor",
+                "fields": [
+                  "iddoctor"
+                ],
+                "referencedSchema": "",
+                "referencedTable": "hospital.doctor",
+                "referencedFields": [
+                  "iddoc"
+                ],
+                "sourceCardinality": "ZeroOrManyRelationship",
+                "targetCardinality": "OneAndOnlyOneRelationship",
+                "comment": "",
+                "oldName": "fk_citas_doctor"
+              },
+              {
+                "objectType": "ForeignKey_LOGICAL",
+                "name": "fk_citas_paciente",
+                "fields": [
+                  "idpaciente"
+                ],
+                "referencedSchema": "",
+                "referencedTable": "hospital.paciente",
+                "referencedFields": [
+                  "idpac"
+                ],
+                "sourceCardinality": "ZeroOrManyRelationship",
+                "targetCardinality": "OneAndOnlyOneRelationship",
+                "comment": "",
+                "oldName": "fk_citas_paciente"
+              },
+              {
+                "objectType": "ForeignKey_LOGICAL",
+                "name": "fk_citas_referencia",
+                "fields": [
+                  "idreferencia"
+                ],
+                "referencedSchema": "",
+                "referencedTable": "hospital.referencia",
+                "referencedFields": [
+                  "idreferencia"
+                ],
+                "sourceCardinality": "ZeroOrManyRelationship",
+                "targetCardinality": "ZeroOrOneRelationship",
+                "comment": "",
+                "oldName": "fk_citas_referencia"
+              }
+            ],
+            "indexes": [
+              {
+                "objectType": "Index_LOGICAL",
+                "name": "fk_citas_consultorio_idx",
+                "fields": [
+                  "idconsultorio"
+                ],
+                "type": "Default",
+                "comment": "",
+                "oldName": "fk_citas_consultorio_idx"
+              },
+              {
+                "objectType": "Index_LOGICAL",
+                "name": "fk_citas_doctor_idx",
+                "fields": [
+                  "iddoctor"
+                ],
+                "type": "Default",
+                "comment": "",
+                "oldName": "fk_citas_doctor_idx"
+              },
+              {
+                "objectType": "Index_LOGICAL",
+                "name": "fk_citas_paciente_idx",
+                "fields": [
+                  "idpaciente"
+                ],
+                "type": "Default",
+                "comment": "",
+                "oldName": "fk_citas_paciente_idx"
+              },
+              {
+                "objectType": "Index_LOGICAL",
+                "name": "fk_citas_referencia_idx",
+                "fields": [
+                  "idreferencia"
+                ],
+                "type": "Default",
+                "comment": "",
+                "oldName": "fk_citas_referencia_idx"
+              }
+            ],
+            "uniques": [],
+            "primaryKey": {
+              "objectType": "PrimaryKey_LOGICAL",
+              "name": "",
+              "fields": [
+                "idcitas"
+              ],
+              "oldName": ""
+            }
+          },
+          {
+            "objectType": "Table_LOGICAL",
+            "name": "hospital.consultorio",
+            "comment": "",
+            "oldName": "consultorio",
+            "fields": [
+              {
+                "objectType": "TableField_LOGICAL",
+                "name": "idconsultorio",
+                "type": "INTEGER",
+                "length": 11,
+                "decimals": -2147483648,
+                "isNullable": false,
+                "defaultType": "Others",
+                "defaultValue": "",
+                "comment": "",
+                "oldName": "idconsultorio"
+              },
+              {
+                "objectType": "TableField_LOGICAL",
+                "name": "consultorio",
+                "type": "NATIONAL CHARACTER VARYING",
+                "length": 200,
+                "decimals": -2147483648,
+                "isNullable": false,
+                "defaultType": "Others",
+                "defaultValue": "",
+                "comment": "",
+                "oldName": "consultorio"
+              },
+              {
+                "objectType": "TableField_LOGICAL",
+                "name": "descripcion",
+                "type": "NATIONAL CHARACTER VARYING",
+                "length": 255,
+                "decimals": -2147483648,
+                "isNullable": false,
+                "defaultType": "Others",
+                "defaultValue": "",
+                "comment": "",
+                "oldName": "descripcion"
+              },
+              {
+                "objectType": "TableField_LOGICAL",
+                "name": "status",
+                "type": "BIT",
+                "length": 1,
+                "decimals": -2147483648,
+                "isNullable": true,
+                "defaultType": "Null",
+                "defaultValue": "",
+                "comment": "",
+                "oldName": "status"
+              }
+            ],
+            "foreignKeys": [],
+            "indexes": [],
+            "uniques": [],
+            "primaryKey": {
+              "objectType": "PrimaryKey_LOGICAL",
+              "name": "",
+              "fields": [
+                "idconsultorio"
+              ],
+              "oldName": ""
+            }
+          },
+          {
+            "objectType": "Table_LOGICAL",
+            "name": "hospital.detallefactura",
+            "comment": "",
+            "oldName": "detallefactura",
+            "fields": [
+              {
+                "objectType": "TableField_LOGICAL",
+                "name": "iddetfactura",
+                "type": "INTEGER",
+                "length": 11,
+                "decimals": -2147483648,
+                "isNullable": false,
+                "defaultType": "Others",
+                "defaultValue": "",
+                "comment": "",
+                "oldName": "iddetfactura"
+              },
+              {
+                "objectType": "TableField_LOGICAL",
+                "name": "idfactura",
+                "type": "INTEGER",
+                "length": 11,
+                "decimals": -2147483648,
+                "isNullable": false,
+                "defaultType": "Others",
+                "defaultValue": "",
+                "comment": "",
+                "oldName": "idfactura"
+              },
+              {
+                "objectType": "TableField_LOGICAL",
+                "name": "articulo",
+                "type": "NATIONAL CHARACTER VARYING",
+                "length": 255,
+                "decimals": -2147483648,
+                "isNullable": false,
+                "defaultType": "Others",
+                "defaultValue": "",
+                "comment": "",
+                "oldName": "articulo"
+              },
+              {
+                "objectType": "TableField_LOGICAL",
+                "name": "descripcion",
+                "type": "NATIONAL CHARACTER VARYING",
+                "length": 255,
+                "decimals": -2147483648,
+                "isNullable": false,
+                "defaultType": "Others",
+                "defaultValue": "",
+                "comment": "",
+                "oldName": "descripcion"
+              },
+              {
+                "objectType": "TableField_LOGICAL",
+                "name": "costo",
+                "type": "DOUBLE PRECISION",
+                "length": -2147483648,
+                "decimals": -2147483648,
+                "isNullable": true,
+                "defaultType": "Null",
+                "defaultValue": "",
+                "comment": "",
+                "oldName": "costo"
+              },
+              {
+                "objectType": "TableField_LOGICAL",
+                "name": "cantidad",
+                "type": "DOUBLE PRECISION",
+                "length": -2147483648,
+                "decimals": -2147483648,
+                "isNullable": true,
+                "defaultType": "Null",
+                "defaultValue": "",
+                "comment": "",
+                "oldName": "cantidad"
+              },
+              {
+                "objectType": "TableField_LOGICAL",
+                "name": "subtotal",
+                "type": "DOUBLE PRECISION",
+                "length": -2147483648,
+                "decimals": -2147483648,
+                "isNullable": true,
+                "defaultType": "Null",
+                "defaultValue": "",
+                "comment": "",
+                "oldName": "subtotal"
+              },
+              {
+                "objectType": "TableField_LOGICAL",
+                "name": "total",
+                "type": "DOUBLE PRECISION",
+                "length": -2147483648,
+                "decimals": -2147483648,
+                "isNullable": true,
+                "defaultType": "Null",
+                "defaultValue": "",
+                "comment": "",
+                "oldName": "total"
+              },
+              {
+                "objectType": "TableField_LOGICAL",
+                "name": "impuesto",
+                "type": "DOUBLE PRECISION",
+                "length": -2147483648,
+                "decimals": -2147483648,
+                "isNullable": true,
+                "defaultType": "Null",
+                "defaultValue": "",
+                "comment": "",
+                "oldName": "impuesto"
+              },
+              {
+                "objectType": "TableField_LOGICAL",
+                "name": "porctdsto",
+                "type": "DOUBLE PRECISION",
+                "length": -2147483648,
+                "decimals": -2147483648,
+                "isNullable": true,
+                "defaultType": "Null",
+                "defaultValue": "",
+                "comment": "",
+                "oldName": "porctdsto"
+              },
+              {
+                "objectType": "TableField_LOGICAL",
+                "name": "grantotal",
+                "type": "DOUBLE PRECISION",
+                "length": -2147483648,
+                "decimals": -2147483648,
+                "isNullable": true,
+                "defaultType": "Null",
+                "defaultValue": "",
+                "comment": "",
+                "oldName": "grantotal"
+              }
+            ],
+            "foreignKeys": [
+              {
+                "objectType": "ForeignKey_LOGICAL",
+                "name": "fk_detallefactura_factura",
+                "fields": [
+                  "idfactura"
+                ],
+                "referencedSchema": "",
+                "referencedTable": "hospital.factura",
+                "referencedFields": [
+                  "idfactura"
+                ],
+                "sourceCardinality": "ZeroOrManyRelationship",
+                "targetCardinality": "OneAndOnlyOneRelationship",
+                "comment": "",
+                "oldName": "fk_detallefactura_factura"
+              }
+            ],
+            "indexes": [
+              {
+                "objectType": "Index_LOGICAL",
+                "name": "fk_detallefactura_factura_idx",
+                "fields": [
+                  "idfactura"
+                ],
+                "type": "Default",
+                "comment": "",
+                "oldName": "fk_detallefactura_factura_idx"
+              }
+            ],
+            "uniques": [],
+            "primaryKey": {
+              "objectType": "PrimaryKey_LOGICAL",
+              "name": "",
+              "fields": [
+                "iddetfactura"
+              ],
+              "oldName": ""
+            }
+          },
+          {
+            "objectType": "Table_LOGICAL",
+            "name": "hospital.factura",
+            "comment": "",
+            "oldName": "factura",
+            "fields": [
+              {
+                "objectType": "TableField_LOGICAL",
+                "name": "idfactura",
+                "type": "INTEGER",
+                "length": 11,
+                "decimals": -2147483648,
+                "isNullable": false,
+                "defaultType": "Others",
+                "defaultValue": "",
+                "comment": "",
+                "oldName": "idfactura"
+              },
+              {
+                "objectType": "TableField_LOGICAL",
+                "name": "idpaciente",
+                "type": "INTEGER",
+                "length": 11,
+                "decimals": -2147483648,
+                "isNullable": false,
+                "defaultType": "Others",
+                "defaultValue": "",
+                "comment": "",
+                "oldName": "idpaciente"
+              },
+              {
+                "objectType": "TableField_LOGICAL",
+                "name": "idconsultorio",
+                "type": "INTEGER",
+                "length": 11,
+                "decimals": -2147483648,
+                "isNullable": false,
+                "defaultType": "Others",
+                "defaultValue": "",
+                "comment": "",
+                "oldName": "idconsultorio"
+              },
+              {
+                "objectType": "TableField_LOGICAL",
+                "name": "email",
+                "type": "NATIONAL CHARACTER VARYING",
+                "length": 150,
+                "decimals": -2147483648,
+                "isNullable": true,
+                "defaultType": "Null",
+                "defaultValue": "",
+                "comment": "",
+                "oldName": "email"
+              },
+              {
+                "objectType": "TableField_LOGICAL",
+                "name": "idimpuesto",
+                "type": "INTEGER",
+                "length": 11,
+                "decimals": -2147483648,
+                "isNullable": false,
+                "defaultType": "Others",
+                "defaultValue": "",
+                "comment": "",
+                "oldName": "idimpuesto"
+              },
+              {
+                "objectType": "TableField_LOGICAL",
+                "name": "direccion",
+                "type": "NATIONAL CHARACTER VARYING",
+                "length": 255,
+                "decimals": -2147483648,
+                "isNullable": false,
+                "defaultType": "Others",
+                "defaultValue": "",
+                "comment": "",
+                "oldName": "direccion"
+              },
+              {
+                "objectType": "TableField_LOGICAL",
+                "name": "direcenvio",
+                "type": "NATIONAL CHARACTER VARYING",
+                "length": 255,
+                "decimals": -2147483648,
+                "isNullable": false,
+                "defaultType": "Others",
+                "defaultValue": "",
+                "comment": "",
+                "oldName": "direcenvio"
+              },
+              {
+                "objectType": "TableField_LOGICAL",
+                "name": "fecfactura",
+                "type": "DATE",
+                "length": -2147483648,
+                "decimals": -2147483648,
+                "isNullable": true,
+                "defaultType": "Null",
+                "defaultValue": "",
+                "comment": "",
+                "oldName": "fecfactura"
+              },
+              {
+                "objectType": "TableField_LOGICAL",
+                "name": "fecvencimiento",
+                "type": "DATE",
+                "length": -2147483648,
+                "decimals": -2147483648,
+                "isNullable": true,
+                "defaultType": "Null",
+                "defaultValue": "",
+                "comment": "",
+                "oldName": "fecvencimiento"
+              },
+              {
+                "objectType": "TableField_LOGICAL",
+                "name": "fecCreate",
+                "type": "TIMESTAMP",
+                "length": -2147483648,
+                "decimals": -2147483648,
+                "isNullable": true,
+                "defaultType": "Null",
+                "defaultValue": "",
+                "comment": "",
+                "oldName": "fecCreate"
+              },
+              {
+                "objectType": "TableField_LOGICAL",
+                "name": "iddetalle",
+                "type": "INTEGER",
+                "length": 11,
+                "decimals": -2147483648,
+                "isNullable": false,
+                "defaultType": "Others",
+                "defaultValue": "",
+                "comment": "",
+                "oldName": "iddetalle"
+              },
+              {
+                "objectType": "TableField_LOGICAL",
+                "name": "total",
+                "type": "DOUBLE PRECISION",
+                "length": -2147483648,
+                "decimals": -2147483648,
+                "isNullable": true,
+                "defaultType": "Null",
+                "defaultValue": "",
+                "comment": "",
+                "oldName": "total"
+              },
+              {
+                "objectType": "TableField_LOGICAL",
+                "name": "impuesto",
+                "type": "DOUBLE PRECISION",
+                "length": -2147483648,
+                "decimals": -2147483648,
+                "isNullable": true,
+                "defaultType": "Null",
+                "defaultValue": "",
+                "comment": "",
+                "oldName": "impuesto"
+              },
+              {
+                "objectType": "TableField_LOGICAL",
+                "name": "porctdsto",
+                "type": "DOUBLE PRECISION",
+                "length": -2147483648,
+                "decimals": -2147483648,
+                "isNullable": true,
+                "defaultType": "Null",
+                "defaultValue": "",
+                "comment": "",
+                "oldName": "porctdsto"
+              },
+              {
+                "objectType": "TableField_LOGICAL",
+                "name": "grantotal",
+                "type": "DOUBLE PRECISION",
+                "length": -2147483648,
+                "decimals": -2147483648,
+                "isNullable": true,
+                "defaultType": "Null",
+                "defaultValue": "",
+                "comment": "",
+                "oldName": "grantotal"
+              }
+            ],
+            "foreignKeys": [],
+            "indexes": [],
+            "uniques": [],
+            "primaryKey": {
+              "objectType": "PrimaryKey_LOGICAL",
+              "name": "",
+              "fields": [
+                "idfactura"
+              ],
+              "oldName": ""
+            }
+          },
+          {
+            "objectType": "Table_LOGICAL",
+            "name": "hospital.feriados",
+            "comment": "",
+            "oldName": "feriados",
+            "fields": [
+              {
+                "objectType": "TableField_LOGICAL",
+                "name": "idferiado",
+                "type": "INTEGER",
+                "length": 11,
+                "decimals": -2147483648,
+                "isNullable": false,
+                "defaultType": "Others",
+                "defaultValue": "",
+                "comment": "",
+                "oldName": "idferiado"
+              },
+              {
+                "objectType": "TableField_LOGICAL",
+                "name": "nombreferiado",
+                "type": "NATIONAL CHARACTER VARYING",
+                "length": 150,
+                "decimals": -2147483648,
+                "isNullable": false,
+                "defaultType": "Others",
+                "defaultValue": "",
+                "comment": "",
+                "oldName": "nombreferiado"
+              },
+              {
+                "objectType": "TableField_LOGICAL",
+                "name": "fechaferiado",
+                "type": "DATE",
+                "length": -2147483648,
+                "decimals": -2147483648,
+                "isNullable": true,
+                "defaultType": "Null",
+                "defaultValue": "",
+                "comment": "",
+                "oldName": "fechaferiado"
+              }
+            ],
+            "foreignKeys": [],
+            "indexes": [],
+            "uniques": [],
+            "primaryKey": {
+              "objectType": "PrimaryKey_LOGICAL",
+              "name": "",
+              "fields": [
+                "idferiado"
+              ],
+              "oldName": ""
+            }
+          },
+          {
+            "objectType": "Table_LOGICAL",
+            "name": "Personal de Salud",
+            "comment": "",
+            "oldName": "doctor",
+            "fields": [
+              {
+                "objectType": "TableField_LOGICAL",
+                "name": "iddoc",
+                "type": "INTEGER",
+                "length": 11,
+                "decimals": -2147483648,
+                "isNullable": false,
+                "defaultType": "Others",
+                "defaultValue": "",
+                "comment": "",
+                "oldName": "iddoc"
+              },
+              {
+                "objectType": "TableField_LOGICAL",
+                "name": "nombre",
+                "type": "NATIONAL CHARACTER VARYING",
+                "length": 80,
+                "decimals": -2147483648,
+                "isNullable": false,
+                "defaultType": "Others",
+                "defaultValue": "",
+                "comment": "",
+                "oldName": "nombre"
+              },
+              {
+                "objectType": "TableField_LOGICAL",
+                "name": "apellidos",
+                "type": "NATIONAL CHARACTER VARYING",
+                "length": 150,
+                "decimals": -2147483648,
+                "isNullable": false,
+                "defaultType": "Others",
+                "defaultValue": "",
+                "comment": "",
+                "oldName": "apellidos"
+              },
+              {
+                "objectType": "TableField_LOGICAL",
+                "name": "username",
+                "type": "NATIONAL CHARACTER VARYING",
+                "length": 30,
+                "decimals": -2147483648,
+                "isNullable": false,
+                "defaultType": "Others",
+                "defaultValue": "",
+                "comment": "",
+                "oldName": "username"
+              },
+              {
+                "objectType": "TableField_LOGICAL",
+                "name": "email",
+                "type": "NATIONAL CHARACTER VARYING",
+                "length": 150,
+                "decimals": -2147483648,
+                "isNullable": false,
+                "defaultType": "Others",
+                "defaultValue": "",
+                "comment": "",
+                "oldName": "email"
+              },
+              {
+                "objectType": "TableField_LOGICAL",
+                "name": "passwd",
+                "type": "NATIONAL CHARACTER VARYING",
+                "length": 150,
+                "decimals": -2147483648,
+                "isNullable": false,
+                "defaultType": "Others",
+                "defaultValue": "",
+                "comment": "",
+                "oldName": "passwd"
+              },
+              {
+                "objectType": "TableField_LOGICAL",
+                "name": "fecnac",
+                "type": "NATIONAL CHARACTER VARYING",
+                "length": 20,
+                "decimals": -2147483648,
+                "isNullable": false,
+                "defaultType": "Others",
+                "defaultValue": "",
+                "comment": "",
+                "oldName": "fecnac"
+              },
+              {
+                "objectType": "TableField_LOGICAL",
+                "name": "sexo",
+                "type": "NATIONAL CHARACTER VARYING",
+                "length": 12,
+                "decimals": -2147483648,
+                "isNullable": false,
+                "defaultType": "Others",
+                "defaultValue": "",
+                "comment": "",
+                "oldName": "sexo"
+              },
+              {
+                "objectType": "TableField_LOGICAL",
+                "name": "direccion",
+                "type": "NATIONAL CHARACTER VARYING",
+                "length": 200,
+                "decimals": -2147483648,
+                "isNullable": true,
+                "defaultType": "Null",
+                "defaultValue": "",
+                "comment": "",
+                "oldName": "direccion"
+              },
+              {
+                "objectType": "TableField_LOGICAL",
+                "name": "departamento",
+                "type": "NATIONAL CHARACTER VARYING",
+                "length": 20,
+                "decimals": -2147483648,
+                "isNullable": true,
+                "defaultType": "Null",
+                "defaultValue": "",
+                "comment": "",
+                "oldName": "departamento"
+              },
+              {
+                "objectType": "TableField_LOGICAL",
+                "name": "provincia",
+                "type": "NATIONAL CHARACTER VARYING",
+                "length": 30,
+                "decimals": -2147483648,
+                "isNullable": true,
+                "defaultType": "Null",
+                "defaultValue": "",
+                "comment": "",
+                "oldName": "provincia"
+              },
+              {
+                "objectType": "TableField_LOGICAL",
+                "name": "distrito",
+                "type": "NATIONAL CHARACTER VARYING",
+                "length": 30,
+                "decimals": -2147483648,
+                "isNullable": true,
+                "defaultType": "Null",
+                "defaultValue": "",
+                "comment": "",
+                "oldName": "distrito"
+              },
+              {
+                "objectType": "TableField_LOGICAL",
+                "name": "profesion",
+                "type": "NATIONAL CHARACTER VARYING",
+                "length": 100,
+                "decimals": -2147483648,
+                "isNullable": false,
+                "defaultType": "Others",
+                "defaultValue": "",
+                "comment": "",
+                "oldName": "profesion"
+              },
+              {
+                "objectType": "TableField_LOGICAL",
+                "name": "telefono",
+                "type": "NATIONAL CHARACTER VARYING",
+                "length": 40,
+                "decimals": -2147483648,
+                "isNullable": false,
+                "defaultType": "Others",
+                "defaultValue": "",
+                "comment": "",
+                "oldName": "telefono"
+              },
+              {
+                "objectType": "TableField_LOGICAL",
+                "name": "avatar",
+                "type": "NATIONAL CHARACTER VARYING",
+                "length": 200,
+                "decimals": -2147483648,
+                "isNullable": false,
+                "defaultType": "Others",
+                "defaultValue": "",
+                "comment": "",
+                "oldName": "avatar"
+              },
+              {
+                "objectType": "TableField_LOGICAL",
+                "name": "biografica",
+                "type": "NATIONAL CHARACTER VARYING",
+                "length": 4000,
+                "decimals": -2147483648,
+                "isNullable": false,
+                "defaultType": "Others",
+                "defaultValue": "",
+                "comment": "",
+                "oldName": "biografica"
+              },
+              {
+                "objectType": "TableField_LOGICAL",
+                "name": "status",
+                "type": "BIT",
+                "length": 1,
+                "decimals": -2147483648,
+                "isNullable": true,
+                "defaultType": "Null",
+                "defaultValue": "",
+                "comment": "",
+                "oldName": "status"
+              },
+              {
+                "objectType": "TableField_LOGICAL",
+                "name": "fecCreate",
+                "type": "TIMESTAMP",
+                "length": -2147483648,
+                "decimals": -2147483648,
+                "isNullable": true,
+                "defaultType": "Null",
+                "defaultValue": "",
+                "comment": "",
+                "oldName": "fecCreate"
+              }
+            ],
+            "foreignKeys": [],
+            "indexes": [],
+            "uniques": [],
+            "primaryKey": {
+              "objectType": "PrimaryKey_LOGICAL",
+              "name": "",
+              "fields": [
+                "iddoc"
+              ],
+              "oldName": ""
+            }
+          },
+          {
+            "objectType": "Table_LOGICAL",
+            "name": "Historia Clinica",
+            "comment": "",
+            "oldName": "historiaclinica",
+            "fields": [
+              {
+                "objectType": "TableField_LOGICAL",
+                "name": "idhc",
+                "type": "INTEGER",
+                "length": 11,
+                "decimals": -2147483648,
+                "isNullable": false,
+                "defaultType": "Others",
+                "defaultValue": "",
+                "comment": "",
+                "oldName": "idhc"
+              },
+              {
+                "objectType": "TableField_LOGICAL",
+                "name": "numhistclinica",
+                "type": "NATIONAL CHARACTER VARYING",
+                "length": 45,
+                "decimals": -2147483648,
+                "isNullable": true,
+                "defaultType": "Null",
+                "defaultValue": "",
+                "comment": "",
+                "oldName": "numhistclinica"
+              },
+              {
+                "objectType": "TableField_LOGICAL",
+                "name": "idpaciente",
+                "type": "INTEGER",
+                "length": 11,
+                "decimals": -2147483648,
+                "isNullable": true,
+                "defaultType": "Null",
+                "defaultValue": "",
+                "comment": "",
+                "oldName": "idpaciente"
+              },
+              {
+                "objectType": "TableField_LOGICAL",
+                "name": "fecconsulta",
+                "type": "NATIONAL CHARACTER VARYING",
+                "length": 30,
+                "decimals": -2147483648,
+                "isNullable": true,
+                "defaultType": "Null",
+                "defaultValue": "",
+                "comment": "",
+                "oldName": "fecconsulta"
+              },
+              {
+                "objectType": "TableField_LOGICAL",
+                "name": "horaconsulta",
+                "type": "NATIONAL CHARACTER VARYING",
+                "length": 30,
+                "decimals": -2147483648,
+                "isNullable": true,
+                "defaultType": "Null",
+                "defaultValue": "",
+                "comment": "",
+                "oldName": "horaconsulta"
+              },
+              {
+                "objectType": "TableField_LOGICAL",
+                "name": "edad",
+                "type": "INTEGER",
+                "length": 11,
+                "decimals": -2147483648,
+                "isNullable": true,
+                "defaultType": "Null",
+                "defaultValue": "",
+                "comment": "",
+                "oldName": "edad"
+              },
+              {
+                "objectType": "TableField_LOGICAL",
+                "name": "motivo",
+                "type": "NATIONAL CHARACTER VARYING",
+                "length": 255,
+                "decimals": -2147483648,
+                "isNullable": true,
+                "defaultType": "Null",
+                "defaultValue": "",
+                "comment": "",
+                "oldName": "motivo"
+              },
+              {
+                "objectType": "TableField_LOGICAL",
+                "name": "signos",
+                "type": "NATIONAL CHARACTER VARYING",
+                "length": 255,
+                "decimals": -2147483648,
+                "isNullable": true,
+                "defaultType": "Null",
+                "defaultValue": "",
+                "comment": "",
+                "oldName": "signos"
+              },
+              {
+                "objectType": "TableField_LOGICAL",
+                "name": "relato",
+                "type": "NATIONAL CHARACTER VARYING",
+                "length": 255,
+                "decimals": -2147483648,
+                "isNullable": true,
+                "defaultType": "Null",
+                "defaultValue": "",
+                "comment": "",
+                "oldName": "relato"
+              },
+              {
+                "objectType": "TableField_LOGICAL",
+                "name": "vacunas",
+                "type": "NATIONAL CHARACTER VARYING",
+                "length": 45,
+                "decimals": -2147483648,
+                "isNullable": true,
+                "defaultType": "Null",
+                "defaultValue": "",
+                "comment": "",
+                "oldName": "vacunas"
+              },
+              {
+                "objectType": "TableField_LOGICAL",
+                "name": "apetito",
+                "type": "NATIONAL CHARACTER VARYING",
+                "length": 45,
+                "decimals": -2147483648,
+                "isNullable": true,
+                "defaultType": "Null",
+                "defaultValue": "",
+                "comment": "",
+                "oldName": "apetito"
+              },
+              {
+                "objectType": "TableField_LOGICAL",
+                "name": "sed",
+                "type": "NATIONAL CHARACTER VARYING",
+                "length": 45,
+                "decimals": -2147483648,
+                "isNullable": true,
+                "defaultType": "Null",
+                "defaultValue": "",
+                "comment": "",
+                "oldName": "sed"
+              },
+              {
+                "objectType": "TableField_LOGICAL",
+                "name": "sueno",
+                "type": "NATIONAL CHARACTER VARYING",
+                "length": 45,
+                "decimals": -2147483648,
+                "isNullable": true,
+                "defaultType": "Null",
+                "defaultValue": "",
+                "comment": "",
+                "oldName": "sueno"
+              },
+              {
+                "objectType": "TableField_LOGICAL",
+                "name": "orina",
+                "type": "NATIONAL CHARACTER VARYING",
+                "length": 45,
+                "decimals": -2147483648,
+                "isNullable": true,
+                "defaultType": "Null",
+                "defaultValue": "",
+                "comment": "",
+                "oldName": "orina"
+              },
+              {
+                "objectType": "TableField_LOGICAL",
+                "name": "deposicion",
+                "type": "NATIONAL CHARACTER VARYING",
+                "length": 45,
+                "decimals": -2147483648,
+                "isNullable": true,
+                "defaultType": "Null",
+                "defaultValue": "",
+                "comment": "",
+                "oldName": "deposicion"
+              },
+              {
+                "objectType": "TableField_LOGICAL",
+                "name": "fiebre15",
+                "type": "NATIONAL CHARACTER",
+                "length": 2,
+                "decimals": -2147483648,
+                "isNullable": true,
+                "defaultType": "Null",
+                "defaultValue": "",
+                "comment": "",
+                "oldName": "fiebre15"
+              },
+              {
+                "objectType": "TableField_LOGICAL",
+                "name": "viaje",
+                "type": "NATIONAL CHARACTER",
+                "length": 2,
+                "decimals": -2147483648,
+                "isNullable": true,
+                "defaultType": "Null",
+                "defaultValue": "",
+                "comment": "",
+                "oldName": "viaje"
+              },
+              {
+                "objectType": "TableField_LOGICAL",
+                "name": "lugar",
+                "type": "NATIONAL CHARACTER VARYING",
+                "length": 150,
+                "decimals": -2147483648,
+                "isNullable": true,
+                "defaultType": "Null",
+                "defaultValue": "",
+                "comment": "",
+                "oldName": "lugar"
+              },
+              {
+                "objectType": "TableField_LOGICAL",
+                "name": "tos15",
+                "type": "NATIONAL CHARACTER",
+                "length": 2,
+                "decimals": -2147483648,
+                "isNullable": true,
+                "defaultType": "Null",
+                "defaultValue": "",
+                "comment": "",
+                "oldName": "tos15"
+              },
+              {
+                "objectType": "TableField_LOGICAL",
+                "name": "secresion",
+                "type": "NATIONAL CHARACTER",
+                "length": 2,
+                "decimals": -2147483648,
+                "isNullable": true,
+                "defaultType": "Null",
+                "defaultValue": "",
+                "comment": "",
+                "oldName": "secresion"
+              },
+              {
+                "objectType": "TableField_LOGICAL",
+                "name": "fur",
+                "type": "NATIONAL CHARACTER VARYING",
+                "length": 45,
+                "decimals": -2147483648,
+                "isNullable": true,
+                "defaultType": "Null",
+                "defaultValue": "",
+                "comment": "",
+                "oldName": "fur"
+              },
+              {
+                "objectType": "TableField_LOGICAL",
+                "name": "examenfisico",
+                "type": "NATIONAL CHARACTER VARYING",
+                "length": 255,
+                "decimals": -2147483648,
+                "isNullable": true,
+                "defaultType": "Null",
+                "defaultValue": "",
+                "comment": "",
+                "oldName": "examenfisico"
+              },
+              {
+                "objectType": "TableField_LOGICAL",
+                "name": "temp",
+                "type": "NATIONAL CHARACTER VARYING",
+                "length": 20,
+                "decimals": -2147483648,
+                "isNullable": true,
+                "defaultType": "Null",
+                "defaultValue": "",
+                "comment": "",
+                "oldName": "temp"
+              },
+              {
+                "objectType": "TableField_LOGICAL",
+                "name": "pa",
+                "type": "NATIONAL CHARACTER VARYING",
+                "length": 20,
+                "decimals": -2147483648,
+                "isNullable": true,
+                "defaultType": "Null",
+                "defaultValue": "",
+                "comment": "",
+                "oldName": "pa"
+              },
+              {
+                "objectType": "TableField_LOGICAL",
+                "name": "fc",
+                "type": "NATIONAL CHARACTER VARYING",
+                "length": 20,
+                "decimals": -2147483648,
+                "isNullable": true,
+                "defaultType": "Null",
+                "defaultValue": "",
+                "comment": "",
+                "oldName": "fc"
+              },
+              {
+                "objectType": "TableField_LOGICAL",
+                "name": "fr",
+                "type": "NATIONAL CHARACTER VARYING",
+                "length": 20,
+                "decimals": -2147483648,
+                "isNullable": true,
+                "defaultType": "Null",
+                "defaultValue": "",
+                "comment": "",
+                "oldName": "fr"
+              },
+              {
+                "objectType": "TableField_LOGICAL",
+                "name": "peso",
+                "type": "NATIONAL CHARACTER VARYING",
+                "length": 20,
+                "decimals": -2147483648,
+                "isNullable": true,
+                "defaultType": "Null",
+                "defaultValue": "",
+                "comment": "",
+                "oldName": "peso"
+              },
+              {
+                "objectType": "TableField_LOGICAL",
+                "name": "talla",
+                "type": "NATIONAL CHARACTER VARYING",
+                "length": 20,
+                "decimals": -2147483648,
+                "isNullable": true,
+                "defaultType": "Null",
+                "defaultValue": "",
+                "comment": "",
+                "oldName": "talla"
+              },
+              {
+                "objectType": "TableField_LOGICAL",
+                "name": "pabd",
+                "type": "NATIONAL CHARACTER VARYING",
+                "length": 20,
+                "decimals": -2147483648,
+                "isNullable": true,
+                "defaultType": "Null",
+                "defaultValue": "",
+                "comment": "",
+                "oldName": "pabd"
+              },
+              {
+                "objectType": "TableField_LOGICAL",
+                "name": "saturacion",
+                "type": "NATIONAL CHARACTER VARYING",
+                "length": 30,
+                "decimals": -2147483648,
+                "isNullable": true,
+                "defaultType": "Null",
+                "defaultValue": "",
+                "comment": "",
+                "oldName": "saturacion"
+              },
+              {
+                "objectType": "TableField_LOGICAL",
+                "name": "diagnostico",
+                "type": "NATIONAL CHARACTER VARYING",
+                "length": 255,
+                "decimals": -2147483648,
+                "isNullable": true,
+                "defaultType": "Null",
+                "defaultValue": "",
+                "comment": "",
+                "oldName": "diagnostico"
+              },
+              {
+                "objectType": "TableField_LOGICAL",
+                "name": "tipoexamen",
+                "type": "NATIONAL CHARACTER VARYING",
+                "length": 45,
+                "decimals": -2147483648,
+                "isNullable": true,
+                "defaultType": "Null",
+                "defaultValue": "",
+                "comment": "",
+                "oldName": "tipoexamen"
+              },
+              {
+                "objectType": "TableField_LOGICAL",
+                "name": "ciex",
+                "type": "NATIONAL CHARACTER VARYING",
+                "length": 50,
+                "decimals": -2147483648,
+                "isNullable": true,
+                "defaultType": "Null",
+                "defaultValue": "",
+                "comment": "",
+                "oldName": "ciex"
+              },
+              {
+                "objectType": "TableField_LOGICAL",
+                "name": "tratamiento",
+                "type": "NATIONAL CHARACTER VARYING",
+                "length": 255,
+                "decimals": -2147483648,
+                "isNullable": true,
+                "defaultType": "Null",
+                "defaultValue": "",
+                "comment": "",
+                "oldName": "tratamiento"
+              },
+              {
+                "objectType": "TableField_LOGICAL",
+                "name": "via",
+                "type": "NATIONAL CHARACTER VARYING",
+                "length": 50,
+                "decimals": -2147483648,
+                "isNullable": true,
+                "defaultType": "Null",
+                "defaultValue": "",
+                "comment": "",
+                "oldName": "via"
+              },
+              {
+                "objectType": "TableField_LOGICAL",
+                "name": "dosis",
+                "type": "NATIONAL CHARACTER VARYING",
+                "length": 50,
+                "decimals": -2147483648,
+                "isNullable": true,
+                "defaultType": "Null",
+                "defaultValue": "",
+                "comment": "",
+                "oldName": "dosis"
+              },
+              {
+                "objectType": "TableField_LOGICAL",
+                "name": "frecuencia",
+                "type": "NATIONAL CHARACTER VARYING",
+                "length": 50,
+                "decimals": -2147483648,
+                "isNullable": true,
+                "defaultType": "Null",
+                "defaultValue": "",
+                "comment": "",
+                "oldName": "frecuencia"
+              },
+              {
+                "objectType": "TableField_LOGICAL",
+                "name": "medidashigienicas",
+                "type": "NATIONAL CHARACTER VARYING",
+                "length": 255,
+                "decimals": -2147483648,
+                "isNullable": true,
+                "defaultType": "Null",
+                "defaultValue": "",
+                "comment": "",
+                "oldName": "medidashigienicas"
+              },
+              {
+                "objectType": "TableField_LOGICAL",
+                "name": "examenesauxiliares",
+                "type": "NATIONAL CHARACTER VARYING",
+                "length": 255,
+                "decimals": -2147483648,
+                "isNullable": true,
+                "defaultType": "Null",
+                "defaultValue": "",
+                "comment": "",
+                "oldName": "examenesauxiliares"
+              },
+              {
+                "objectType": "TableField_LOGICAL",
+                "name": "medidaspreventivas",
+                "type": "NATIONAL CHARACTER VARYING",
+                "length": 255,
+                "decimals": -2147483648,
+                "isNullable": true,
+                "defaultType": "Null",
+                "defaultValue": "",
+                "comment": "",
+                "oldName": "medidaspreventivas"
+              },
+              {
+                "objectType": "TableField_LOGICAL",
+                "name": "proximaconsulta",
+                "type": "NATIONAL CHARACTER VARYING",
+                "length": 30,
+                "decimals": -2147483648,
+                "isNullable": true,
+                "defaultType": "Null",
+                "defaultValue": "",
+                "comment": "",
+                "oldName": "proximaconsulta"
+              },
+              {
+                "objectType": "TableField_LOGICAL",
+                "name": "observaciones",
+                "type": "NATIONAL CHARACTER VARYING",
+                "length": 255,
+                "decimals": -2147483648,
+                "isNullable": true,
+                "defaultType": "Null",
+                "defaultValue": "",
+                "comment": "",
+                "oldName": "observaciones"
+              },
+              {
+                "objectType": "TableField_LOGICAL",
+                "name": "fecCreate",
+                "type": "TIMESTAMP",
+                "length": -2147483648,
+                "decimals": -2147483648,
+                "isNullable": true,
+                "defaultType": "Null",
+                "defaultValue": "",
+                "comment": "",
+                "oldName": "fecCreate"
+              },
+              {
+                "objectType": "TableField_LOGICAL",
+                "name": "idconsultorio",
+                "type": "INTEGER",
+                "length": 11,
+                "decimals": -2147483648,
+                "isNullable": true,
+                "defaultType": "Null",
+                "defaultValue": "",
+                "comment": "",
+                "oldName": "idconsultorio"
+              },
+              {
+                "objectType": "TableField_LOGICAL",
+                "name": "fecChange",
+                "type": "TIMESTAMP",
+                "length": -2147483648,
+                "decimals": -2147483648,
+                "isNullable": true,
+                "defaultType": "Null",
+                "defaultValue": "",
+                "comment": "",
+                "oldName": "fecChange"
+              },
+              {
+                "objectType": "TableField_LOGICAL",
+                "name": "iddoctor",
+                "type": "INTEGER",
+                "length": 11,
+                "decimals": -2147483648,
+                "isNullable": true,
+                "defaultType": "Null",
+                "defaultValue": "",
+                "comment": "",
+                "oldName": "iddoctor"
+              }
+            ],
+            "foreignKeys": [
+              {
+                "objectType": "ForeignKey_LOGICAL",
+                "name": "fk_historiaclinica_consultorio",
+                "fields": [
+                  "idconsultorio"
+                ],
+                "referencedSchema": "",
+                "referencedTable": "hospital.consultorio",
+                "referencedFields": [
+                  "idconsultorio"
+                ],
+                "sourceCardinality": "ZeroOrManyRelationship",
+                "targetCardinality": "ZeroOrOneRelationship",
+                "comment": "",
+                "oldName": "fk_historiaclinica_consultorio"
+              },
+              {
+                "objectType": "ForeignKey_LOGICAL",
+                "name": "fk_historiaclinica_doctor",
+                "fields": [
+                  "iddoctor"
+                ],
+                "referencedSchema": "",
+                "referencedTable": "hospital.doctor",
+                "referencedFields": [
+                  "iddoc"
+                ],
+                "sourceCardinality": "ZeroOrManyRelationship",
+                "targetCardinality": "ZeroOrOneRelationship",
+                "comment": "",
+                "oldName": "fk_historiaclinica_doctor"
+              },
+              {
+                "objectType": "ForeignKey_LOGICAL",
+                "name": "fk_historiaclinica_paciente",
+                "fields": [
+                  "idpaciente"
+                ],
+                "referencedSchema": "",
+                "referencedTable": "hospital.paciente",
+                "referencedFields": [
+                  "idpac"
+                ],
+                "sourceCardinality": "ZeroOrManyRelationship",
+                "targetCardinality": "ZeroOrOneRelationship",
+                "comment": "",
+                "oldName": "fk_historiaclinica_paciente"
+              }
+            ],
+            "indexes": [
+              {
+                "objectType": "Index_LOGICAL",
+                "name": "fk_historiaclinica_paciente_idx",
+                "fields": [
+                  "idpaciente"
+                ],
+                "type": "Default",
+                "comment": "",
+                "oldName": "fk_historiaclinica_paciente_idx"
+              },
+              {
+                "objectType": "Index_LOGICAL",
+                "name": "fk_historiaclinica_consultorio_idx",
+                "fields": [
+                  "idconsultorio"
+                ],
+                "type": "Default",
+                "comment": "",
+                "oldName": "fk_historiaclinica_consultorio_idx"
+              },
+              {
+                "objectType": "Index_LOGICAL",
+                "name": "fk_historiaclinica_doctor_idx",
+                "fields": [
+                  "iddoctor"
+                ],
+                "type": "Default",
+                "comment": "",
+                "oldName": "fk_historiaclinica_doctor_idx"
+              }
+            ],
+            "uniques": [],
+            "primaryKey": {
+              "objectType": "PrimaryKey_LOGICAL",
+              "name": "",
+              "fields": [
+                "idhc"
+              ],
+              "oldName": ""
+            }
+          },
+          {
+            "objectType": "Table_LOGICAL",
+            "name": "Paciente",
+            "comment": "",
+            "oldName": "paciente",
+            "fields": [
+              {
+                "objectType": "TableField_LOGICAL",
+                "name": "idpac",
+                "type": "INTEGER",
+                "length": 11,
+                "decimals": -2147483648,
+                "isNullable": false,
+                "defaultType": "Others",
+                "defaultValue": "",
+                "comment": "",
+                "oldName": "idpac"
+              },
+              {
+                "objectType": "TableField_LOGICAL",
+                "name": "dni",
+                "type": "NATIONAL CHARACTER VARYING",
+                "length": 11,
+                "decimals": -2147483648,
+                "isNullable": false,
+                "defaultType": "Others",
+                "defaultValue": "",
+                "comment": "",
+                "oldName": "dni"
+              },
+              {
+                "objectType": "TableField_LOGICAL",
+                "name": "nombre",
+                "type": "NATIONAL CHARACTER VARYING",
+                "length": 80,
+                "decimals": -2147483648,
+                "isNullable": false,
+                "defaultType": "Others",
+                "defaultValue": "",
+                "comment": "",
+                "oldName": "nombre"
+              },
+              {
+                "objectType": "TableField_LOGICAL",
+                "name": "apellidos",
+                "type": "NATIONAL CHARACTER VARYING",
+                "length": 150,
+                "decimals": -2147483648,
+                "isNullable": false,
+                "defaultType": "Others",
+                "defaultValue": "",
+                "comment": "",
+                "oldName": "apellidos"
+              },
+              {
+                "objectType": "TableField_LOGICAL",
+                "name": "email",
+                "type": "NATIONAL CHARACTER VARYING",
+                "length": 150,
+                "decimals": -2147483648,
+                "isNullable": false,
+                "defaultType": "Others",
+                "defaultValue": "",
+                "comment": "",
+                "oldName": "email"
+              },
+              {
+                "objectType": "TableField_LOGICAL",
+                "name": "fecnac",
+                "type": "NATIONAL CHARACTER VARYING",
+                "length": 10,
+                "decimals": -2147483648,
+                "isNullable": false,
+                "defaultType": "Others",
+                "defaultValue": "",
+                "comment": "",
+                "oldName": "fecnac"
+              },
+              {
+                "objectType": "TableField_LOGICAL",
+                "name": "sexo",
+                "type": "NATIONAL CHARACTER VARYING",
+                "length": 12,
+                "decimals": -2147483648,
+                "isNullable": false,
+                "defaultType": "Others",
+                "defaultValue": "",
+                "comment": "",
+                "oldName": "sexo"
+              },
+              {
+                "objectType": "TableField_LOGICAL",
+                "name": "direccion",
+                "type": "NATIONAL CHARACTER VARYING",
+                "length": 200,
+                "decimals": -2147483648,
+                "isNullable": true,
+                "defaultType": "Null",
+                "defaultValue": "",
+                "comment": "",
+                "oldName": "direccion"
+              },
+              {
+                "objectType": "TableField_LOGICAL",
+                "name": "distrito",
+                "type": "NATIONAL CHARACTER VARYING",
+                "length": 40,
+                "decimals": -2147483648,
+                "isNullable": true,
+                "defaultType": "Null",
+                "defaultValue": "",
+                "comment": "",
+                "oldName": "distrito"
+              },
+              {
+                "objectType": "TableField_LOGICAL",
+                "name": "provincia",
+                "type": "NATIONAL CHARACTER VARYING",
+                "length": 30,
+                "decimals": -2147483648,
+                "isNullable": true,
+                "defaultType": "Null",
+                "defaultValue": "",
+                "comment": "",
+                "oldName": "provincia"
+              },
+              {
+                "objectType": "TableField_LOGICAL",
+                "name": "ciudad",
+                "type": "NATIONAL CHARACTER VARYING",
+                "length": 30,
+                "decimals": -2147483648,
+                "isNullable": true,
+                "defaultType": "Null",
+                "defaultValue": "",
+                "comment": "",
+                "oldName": "ciudad"
+              },
+              {
+                "objectType": "TableField_LOGICAL",
+                "name": "codpostal",
+                "type": "NATIONAL CHARACTER VARYING",
+                "length": 20,
+                "decimals": -2147483648,
+                "isNullable": true,
+                "defaultType": "Null",
+                "defaultValue": "",
+                "comment": "",
+                "oldName": "codpostal"
+              },
+              {
+                "objectType": "TableField_LOGICAL",
+                "name": "telefono",
+                "type": "NATIONAL CHARACTER VARYING",
+                "length": 40,
+                "decimals": -2147483648,
+                "isNullable": true,
+                "defaultType": "Null",
+                "defaultValue": "",
+                "comment": "",
+                "oldName": "telefono"
+              },
+              {
+                "objectType": "TableField_LOGICAL",
+                "name": "avatar",
+                "type": "NATIONAL CHARACTER VARYING",
+                "length": 200,
+                "decimals": -2147483648,
+                "isNullable": true,
+                "defaultType": "Null",
+                "defaultValue": "",
+                "comment": "",
+                "oldName": "avatar"
+              },
+              {
+                "objectType": "TableField_LOGICAL",
+                "name": "status",
+                "type": "BIT",
+                "length": 1,
+                "decimals": -2147483648,
+                "isNullable": true,
+                "defaultType": "Null",
+                "defaultValue": "",
+                "comment": "",
+                "oldName": "status"
+              },
+              {
+                "objectType": "TableField_LOGICAL",
+                "name": "fecCreate",
+                "type": "TIMESTAMP",
+                "length": -2147483648,
+                "decimals": -2147483648,
+                "isNullable": true,
+                "defaultType": "Null",
+                "defaultValue": "",
+                "comment": "",
+                "oldName": "fecCreate"
+              }
+            ],
+            "foreignKeys": [],
+            "indexes": [],
+            "uniques": [],
+            "primaryKey": {
+              "objectType": "PrimaryKey_LOGICAL",
+              "name": "",
+              "fields": [
+                "idpac"
+              ],
+              "oldName": ""
+            }
+          },
+          {
+            "objectType": "Table_LOGICAL",
+            "name": "Referencia",
+            "comment": "",
+            "oldName": "referencia",
+            "fields": [
+              {
+                "objectType": "TableField_LOGICAL",
+                "name": "idreferencia",
+                "type": "INTEGER",
+                "length": 11,
+                "decimals": -2147483648,
+                "isNullable": false,
+                "defaultType": "Others",
+                "defaultValue": "",
+                "comment": "",
+                "oldName": "idreferencia"
+              },
+              {
+                "objectType": "TableField_LOGICAL",
+                "name": "referencia",
+                "type": "NATIONAL CHARACTER VARYING",
+                "length": 45,
+                "decimals": -2147483648,
+                "isNullable": true,
+                "defaultType": "Null",
+                "defaultValue": "",
+                "comment": "",
+                "oldName": "referencia"
+              },
+              {
+                "objectType": "TableField_LOGICAL",
+                "name": "fecha",
+                "type": "DATE",
+                "length": -2147483648,
+                "decimals": -2147483648,
+                "isNullable": true,
+                "defaultType": "Null",
+                "defaultValue": "",
+                "comment": "",
+                "oldName": "fecha"
+              },
+              {
+                "objectType": "TableField_LOGICAL",
+                "name": "lugar",
+                "type": "NATIONAL CHARACTER VARYING",
+                "length": 45,
+                "decimals": -2147483648,
+                "isNullable": true,
+                "defaultType": "Null",
+                "defaultValue": "",
+                "comment": "",
+                "oldName": "lugar"
+              },
+              {
+                "objectType": "TableField_LOGICAL",
+                "name": "motivo",
+                "type": "NATIONAL CHARACTER VARYING",
+                "length": 45,
+                "decimals": -2147483648,
+                "isNullable": true,
+                "defaultType": "Null",
+                "defaultValue": "",
+                "comment": "",
+                "oldName": "motivo"
+              },
+              {
+                "objectType": "TableField_LOGICAL",
+                "name": "idcita",
+                "type": "INTEGER",
+                "length": 11,
+                "decimals": -2147483648,
+                "isNullable": true,
+                "defaultType": "Null",
+                "defaultValue": "",
+                "comment": "",
+                "oldName": "idcita"
+              },
+              {
+                "objectType": "TableField_LOGICAL",
+                "name": "observacion",
+                "type": "NATIONAL CHARACTER VARYING",
+                "length": 255,
+                "decimals": -2147483648,
+                "isNullable": true,
+                "defaultType": "Null",
+                "defaultValue": "",
+                "comment": "",
+                "oldName": "observacion"
+              },
+              {
+                "objectType": "TableField_LOGICAL",
+                "name": "fecCreate",
+                "type": "TIMESTAMP",
+                "length": -2147483648,
+                "decimals": -2147483648,
+                "isNullable": true,
+                "defaultType": "Null",
+                "defaultValue": "",
+                "comment": "",
+                "oldName": "fecCreate"
+              },
+              {
+                "objectType": "TableField_LOGICAL",
+                "name": "idpersonal",
+                "type": "INTEGER",
+                "length": 11,
+                "decimals": -2147483648,
+                "isNullable": true,
+                "defaultType": "Null",
+                "defaultValue": "",
+                "comment": "",
+                "oldName": "idpersonal"
+              },
+              {
+                "objectType": "TableField_LOGICAL",
+                "name": "idhistclinica",
+                "type": "INTEGER",
+                "length": 11,
+                "decimals": -2147483648,
+                "isNullable": true,
+                "defaultType": "Null",
+                "defaultValue": "",
+                "comment": "",
+                "oldName": "idhistclinica"
+              },
+              {
+                "objectType": "TableField_LOGICAL",
+                "name": "idpaciente",
+                "type": "INTEGER",
+                "length": 11,
+                "decimals": -2147483648,
+                "isNullable": true,
+                "defaultType": "Null",
+                "defaultValue": "",
+                "comment": "",
+                "oldName": "idpaciente"
+              }
+            ],
+            "foreignKeys": [
+              {
+                "objectType": "ForeignKey_LOGICAL",
+                "name": "fk_referencia_histclinica",
+                "fields": [
+                  "idhistclinica"
+                ],
+                "referencedSchema": "",
+                "referencedTable": "hospital.historiaclinica",
+                "referencedFields": [
+                  "idhc"
+                ],
+                "sourceCardinality": "ZeroOrManyRelationship",
+                "targetCardinality": "ZeroOrOneRelationship",
+                "comment": "",
+                "oldName": "fk_referencia_histclinica"
+              },
+              {
+                "objectType": "ForeignKey_LOGICAL",
+                "name": "fk_referencia_paciente",
+                "fields": [
+                  "idpaciente"
+                ],
+                "referencedSchema": "",
+                "referencedTable": "hospital.paciente",
+                "referencedFields": [
+                  "idpac"
+                ],
+                "sourceCardinality": "ZeroOrManyRelationship",
+                "targetCardinality": "ZeroOrOneRelationship",
+                "comment": "",
+                "oldName": "fk_referencia_paciente"
+              }
+            ],
+            "indexes": [
+              {
+                "objectType": "Index_LOGICAL",
+                "name": "fk_referencia_paciente_idx",
+                "fields": [
+                  "idpaciente"
+                ],
+                "type": "Default",
+                "comment": "",
+                "oldName": "fk_referencia_paciente_idx"
+              },
+              {
+                "objectType": "Index_LOGICAL",
+                "name": "fk_referencia_personal_idx",
+                "fields": [
+                  "idpersonal"
+                ],
+                "type": "Default",
+                "comment": "",
+                "oldName": "fk_referencia_personal_idx"
+              },
+              {
+                "objectType": "Index_LOGICAL",
+                "name": "fk_referencia_histclinica_idx",
+                "fields": [
+                  "idhistclinica"
+                ],
+                "type": "Default",
+                "comment": "",
+                "oldName": "fk_referencia_histclinica_idx"
+              }
+            ],
+            "uniques": [],
+            "primaryKey": {
+              "objectType": "PrimaryKey_LOGICAL",
+              "name": "",
+              "fields": [
+                "idreferencia"
+              ],
+              "oldName": ""
+            }
+          },
+          {
+            "objectType": "Table_LOGICAL",
+            "name": "Empleado",
+            "comment": "",
+            "oldName": "empleado",
+            "fields": [
+              {
+                "objectType": "TableField_LOGICAL",
+                "name": "id_empleado",
+                "type": "INTEGER",
+                "length": 11,
+                "decimals": 0,
+                "isNullable": false,
+                "defaultType": "Others",
+                "defaultValue": "",
+                "comment": "",
+                "oldName": "id_empleado"
+              },
+              {
+                "objectType": "TableField_LOGICAL",
+                "name": "nombre_empleado",
+                "type": "NATIONAL CHARACTER VARYING",
+                "length": 60,
+                "decimals": 0,
+                "isNullable": false,
+                "defaultType": "Others",
+                "defaultValue": "",
+                "comment": "",
+                "oldName": "nombre_empleado"
+              },
+              {
+                "objectType": "TableField_LOGICAL",
+                "name": "apellidos_empleado",
+                "type": "NATIONAL CHARACTER VARYING",
+                "length": 120,
+                "decimals": 0,
+                "isNullable": false,
+                "defaultType": "Others",
+                "defaultValue": "",
+                "comment": "",
+                "oldName": "apellidos_empleado"
+              },
+              {
+                "objectType": "TableField_LOGICAL",
+                "name": "usuario_empleado",
+                "type": "NATIONAL CHARACTER VARYING",
+                "length": 20,
+                "decimals": 0,
+                "isNullable": false,
+                "defaultType": "Others",
+                "defaultValue": "",
+                "comment": "",
+                "oldName": "usuario_empleado"
+              },
+              {
+                "objectType": "TableField_LOGICAL",
+                "name": "clave_empleado",
+                "type": "NATIONAL CHARACTER VARYING",
+                "length": 150,
+                "decimals": 0,
+                "isNullable": false,
+                "defaultType": "Others",
+                "defaultValue": "",
+                "comment": "",
+                "oldName": "clave_empleado"
+              },
+              {
+                "objectType": "TableField_LOGICAL",
+                "name": "email_empleado",
+                "type": "NATIONAL CHARACTER VARYING",
+                "length": 150,
+                "decimals": 0,
+                "isNullable": true,
+                "defaultType": "Null",
+                "defaultValue": "",
+                "comment": "",
+                "oldName": "email_empleado"
+              },
+              {
+                "objectType": "TableField_LOGICAL",
+                "name": "telefono_empleado",
+                "type": "NATIONAL CHARACTER VARYING",
+                "length": 20,
+                "decimals": 0,
+                "isNullable": true,
+                "defaultType": "Null",
+                "defaultValue": "",
+                "comment": "",
+                "oldName": "telefono_empleado"
+              },
+              {
+                "objectType": "TableField_LOGICAL",
+                "name": "estado_empleado",
+                "type": "BIT",
+                "length": 1,
+                "decimals": 0,
+                "isNullable": true,
+                "defaultType": "Null",
+                "defaultValue": "",
+                "comment": "",
+                "oldName": "estado_empleado"
+              },
+              {
+                "objectType": "TableField_LOGICAL",
+                "name": "fecIngreso_empleado",
+                "type": "DATE",
+                "length": 0,
+                "decimals": 0,
+                "isNullable": true,
+                "defaultType": "Null",
+                "defaultValue": "",
+                "comment": "",
+                "oldName": "fecIngreso_empleado"
+              },
+              {
+                "objectType": "TableField_LOGICAL",
+                "name": "feccreacion_empleado",
+                "type": "TIMESTAMP",
+                "length": 0,
+                "decimals": 0,
+                "isNullable": true,
+                "defaultType": "Null",
+                "defaultValue": "",
+                "comment": "",
+                "oldName": "feccreacion_empleado"
+              },
+              {
+                "objectType": "TableField_LOGICAL",
+                "name": "idpapel_empleado",
+                "type": "INTEGER",
+                "length": 11,
+                "decimals": 0,
+                "isNullable": false,
+                "defaultType": "Others",
+                "defaultValue": "",
+                "comment": "",
+                "oldName": "idpapel_empleado"
+              }
+            ],
+            "foreignKeys": [
+              {
+                "objectType": "ForeignKey_LOGICAL",
+                "name": "fk_empleado_papel",
+                "fields": [
+                  "idpapel_empleado"
+                ],
+                "referencedSchema": "",
+                "referencedTable": "hospital.papel",
+                "referencedFields": [
+                  "idpapel"
+                ],
+                "sourceCardinality": "ZeroOrManyRelationship",
+                "targetCardinality": "OneAndOnlyOneRelationship",
+                "comment": "",
+                "oldName": "fk_empleado_papel"
+              }
+            ],
+            "indexes": [
+              {
+                "objectType": "Index_LOGICAL",
+                "name": "fk_empleado_papel_idx",
+                "fields": [
+                  "idpapel_empleado"
+                ],
+                "type": "Default",
+                "comment": "",
+                "oldName": "fk_empleado_papel_idx"
+              }
+            ],
+            "uniques": [],
+            "primaryKey": {
+              "objectType": "PrimaryKey_LOGICAL",
+              "name": "",
+              "fields": [
+                "id_empleado"
+              ],
+              "oldName": ""
+            }
+          },
+          {
+            "objectType": "Table_LOGICAL",
+            "name": "Asistencia",
+            "comment": "",
+            "oldName": "asistencia",
+            "fields": [
+              {
+                "objectType": "TableField_LOGICAL",
+                "name": "id_asistencia",
+                "type": "INTEGER",
+                "length": 11,
+                "decimals": 0,
+                "isNullable": false,
+                "defaultType": "Others",
+                "defaultValue": "",
+                "comment": "",
+                "oldName": "id_asistencia"
+              },
+              {
+                "objectType": "TableField_LOGICAL",
+                "name": "dia",
+                "type": "TIMESTAMP",
+                "length": -2147483648,
+                "decimals": -2147483648,
+                "isNullable": false,
+                "defaultType": "Others",
+                "defaultValue": "",
+                "comment": "",
+                "oldName": "dia"
+              },
+              {
+                "objectType": "TableField_LOGICAL",
+                "name": "anio",
+                "type": "NATIONAL CHARACTER",
+                "length": 4,
+                "decimals": -2147483648,
+                "isNullable": false,
+                "defaultType": "Others",
+                "defaultValue": "",
+                "comment": "",
+                "oldName": "anio"
+              },
+              {
+                "objectType": "TableField_LOGICAL",
+                "name": "id_empleado",
+                "type": "INTEGER",
+                "length": 11,
+                "decimals": 0,
+                "isNullable": false,
+                "defaultType": "Others",
+                "defaultValue": "",
+                "comment": "",
+                "oldName": "id_empleado"
+              }
+            ],
+            "foreignKeys": [
+              {
+                "objectType": "ForeignKey_LOGICAL",
+                "name": "fk_asistencia_empleado",
+                "fields": [
+                  "id_empleado"
+                ],
+                "referencedSchema": "",
+                "referencedTable": "hospital.empleado",
+                "referencedFields": [
+                  "idempleado"
+                ],
+                "sourceCardinality": "ZeroOrManyRelationship",
+                "targetCardinality": "OneAndOnlyOneRelationship",
+                "comment": "",
+                "oldName": "fk_asistencia_empleado"
+              }
+            ],
+            "indexes": [
+              {
+                "objectType": "Index_LOGICAL",
+                "name": "fk_asistencia_empleado_idx",
+                "fields": [
+                  "id_empleado"
+                ],
+                "type": "Default",
+                "comment": "",
+                "oldName": "fk_asistencia_empleado_idx"
+              }
+            ],
+            "uniques": [],
+            "primaryKey": {
+              "objectType": "PrimaryKey_LOGICAL",
+              "name": "",
+              "fields": [
+                "id_asistencia"
+              ],
+              "oldName": ""
+            }
+          },
+          {
+            "objectType": "Table_LOGICAL",
+            "name": "Papel",
+            "comment": "",
+            "oldName": "papel",
+            "fields": [
+              {
+                "objectType": "TableField_LOGICAL",
+                "name": "id_papel",
+                "type": "INTEGER",
+                "length": 11,
+                "decimals": 0,
+                "isNullable": false,
+                "defaultType": "Others",
+                "defaultValue": "",
+                "comment": "",
+                "oldName": "id_papel"
+              },
+              {
+                "objectType": "TableField_LOGICAL",
+                "name": "descripcion_papel",
+                "type": "NATIONAL CHARACTER VARYING",
+                "length": 200,
+                "decimals": 0,
+                "isNullable": false,
+                "defaultType": "Others",
+                "defaultValue": "",
+                "comment": "",
+                "oldName": "descripcion_papel"
+              }
+            ],
+            "foreignKeys": [],
+            "indexes": [],
+            "uniques": [],
+            "primaryKey": {
+              "objectType": "PrimaryKey_LOGICAL",
+              "name": "",
+              "fields": [
+                "id_papel"
+              ],
+              "oldName": ""
+            }
+          },
+          {
+            "objectType": "Table_LOGICAL",
+            "name": "Licencias",
+            "comment": "",
+            "oldName": "licencias",
+            "fields": [
+              {
+                "objectType": "TableField_LOGICAL",
+                "name": "id_licencia",
+                "type": "INTEGER",
+                "length": 11,
+                "decimals": 0,
+                "isNullable": false,
+                "defaultType": "Others",
+                "defaultValue": "",
+                "comment": "",
+                "oldName": "id_licencia"
+              },
+              {
+                "objectType": "TableField_LOGICAL",
+                "name": "id_tipolicencia",
+                "type": "INTEGER",
+                "length": 11,
+                "decimals": 0,
+                "isNullable": false,
+                "defaultType": "Others",
+                "defaultValue": "",
+                "comment": "",
+                "oldName": "id_tipolicencia"
+              },
+              {
+                "objectType": "TableField_LOGICAL",
+                "name": "desde",
+                "type": "DATE",
+                "length": -2147483648,
+                "decimals": -2147483648,
+                "isNullable": false,
+                "defaultType": "Others",
+                "defaultValue": "",
+                "comment": "",
+                "oldName": "desde"
+              },
+              {
+                "objectType": "TableField_LOGICAL",
+                "name": "hasta",
+                "type": "DATE",
+                "length": -2147483648,
+                "decimals": -2147483648,
+                "isNullable": false,
+                "defaultType": "Others",
+                "defaultValue": "",
+                "comment": "",
+                "oldName": "hasta"
+              },
+              {
+                "objectType": "TableField_LOGICAL",
+                "name": "numdias",
+                "type": "INTEGER",
+                "length": 11,
+                "decimals": -2147483648,
+                "isNullable": false,
+                "defaultType": "Others",
+                "defaultValue": "",
+                "comment": "",
+                "oldName": "numdias"
+              },
+              {
+                "objectType": "TableField_LOGICAL",
+                "name": "diasrestantes",
+                "type": "INTEGER",
+                "length": 11,
+                "decimals": -2147483648,
+                "isNullable": false,
+                "defaultType": "Others",
+                "defaultValue": "",
+                "comment": "",
+                "oldName": "diasrestantes"
+              },
+              {
+                "objectType": "TableField_LOGICAL",
+                "name": "razon",
+                "type": "NATIONAL CHARACTER VARYING",
+                "length": 4000,
+                "decimals": -2147483648,
+                "isNullable": true,
+                "defaultType": "Null",
+                "defaultValue": "",
+                "comment": "",
+                "oldName": "razon"
+              },
+              {
+                "objectType": "TableField_LOGICAL",
+                "name": "feccreate",
+                "type": "TIMESTAMP",
+                "length": -2147483648,
+                "decimals": -2147483648,
+                "isNullable": true,
+                "defaultType": "Null",
+                "defaultValue": "",
+                "comment": "",
+                "oldName": "feccreate"
+              },
+              {
+                "objectType": "TableField_LOGICAL",
+                "name": "id_empleado",
+                "type": "INTEGER",
+                "length": 11,
+                "decimals": 0,
+                "isNullable": false,
+                "defaultType": "Others",
+                "defaultValue": "",
+                "comment": "",
+                "oldName": "id_empleado"
+              }
+            ],
+            "foreignKeys": [
+              {
+                "objectType": "ForeignKey_LOGICAL",
+                "name": "fk_licencias_empleado",
+                "fields": [
+                  "id_empleado"
+                ],
+                "referencedSchema": "",
+                "referencedTable": "hospital.empleado",
+                "referencedFields": [
+                  "idempleado"
+                ],
+                "sourceCardinality": "ZeroOrManyRelationship",
+                "targetCardinality": "OneAndOnlyOneRelationship",
+                "comment": "",
+                "oldName": "fk_licencias_empleado"
+              },
+              {
+                "objectType": "ForeignKey_LOGICAL",
+                "name": "fk_licencias_tipolicencia",
+                "fields": [
+                  "id_tipolicencia"
+                ],
+                "referencedSchema": "",
+                "referencedTable": "hospital.tipolicencia",
+                "referencedFields": [
+                  "idtipolicencia"
+                ],
+                "sourceCardinality": "ZeroOrManyRelationship",
+                "targetCardinality": "OneAndOnlyOneRelationship",
+                "comment": "",
+                "oldName": "fk_licencias_tipolicencia"
+              }
+            ],
+            "indexes": [
+              {
+                "objectType": "Index_LOGICAL",
+                "name": "fk_licencias_tipolicencia_idx",
+                "fields": [
+                  "id_tipolicencia"
+                ],
+                "type": "Default",
+                "comment": "",
+                "oldName": "fk_licencias_tipolicencia_idx"
+              },
+              {
+                "objectType": "Index_LOGICAL",
+                "name": "fk_licencias_empleado_idx",
+                "fields": [
+                  "id_empleado"
+                ],
+                "type": "Default",
+                "comment": "",
+                "oldName": "fk_licencias_empleado_idx"
+              }
+            ],
+            "uniques": [],
+            "primaryKey": {
+              "objectType": "PrimaryKey_LOGICAL",
+              "name": "",
+              "fields": [
+                "id_licencia"
+              ],
+              "oldName": ""
+            }
+          },
+          {
+            "objectType": "Table_LOGICAL",
+            "name": "Tipo Licencia",
+            "comment": "",
+            "oldName": "tipolicencia",
+            "fields": [
+              {
+                "objectType": "TableField_LOGICAL",
+                "name": "id_tipolicencia",
+                "type": "INTEGER",
+                "length": 11,
+                "decimals": 0,
+                "isNullable": false,
+                "defaultType": "Others",
+                "defaultValue": "",
+                "comment": "",
+                "oldName": "id_tipolicencia"
+              },
+              {
+                "objectType": "TableField_LOGICAL",
+                "name": "descripcion_tipolicencia",
+                "type": "NATIONAL CHARACTER VARYING",
+                "length": 60,
+                "decimals": 0,
+                "isNullable": false,
+                "defaultType": "Others",
+                "defaultValue": "",
+                "comment": "",
+                "oldName": "descripcion_tipolicencia"
+              }
+            ],
+            "foreignKeys": [],
+            "indexes": [],
+            "uniques": [],
+            "primaryKey": {
+              "objectType": "PrimaryKey_LOGICAL",
+              "name": "",
+              "fields": [
+                "id_tipolicencia"
+              ],
+              "oldName": ""
+            }
+          },
+          {
+            "objectType": "Table_LOGICAL",
+            "name": "Horario",
+            "comment": "",
+            "oldName": "horario",
+            "fields": [
+              {
+                "objectType": "TableField_LOGICAL",
+                "name": "id_horario",
+                "type": "INTEGER",
+                "length": 11,
+                "decimals": 0,
+                "isNullable": false,
+                "defaultType": "Others",
+                "defaultValue": "",
+                "comment": "",
+                "oldName": "id_horario"
+              },
+              {
+                "objectType": "TableField_LOGICAL",
+                "name": "diasdispon_horario",
+                "type": "NATIONAL CHARACTER VARYING",
+                "length": 200,
+                "decimals": 0,
+                "isNullable": false,
+                "defaultType": "Others",
+                "defaultValue": "",
+                "comment": "",
+                "oldName": "diasdispon_horario"
+              },
+              {
+                "objectType": "TableField_LOGICAL",
+                "name": "horainicio_horario",
+                "type": "TIME",
+                "length": 0,
+                "decimals": 0,
+                "isNullable": true,
+                "defaultType": "Null",
+                "defaultValue": "",
+                "comment": "",
+                "oldName": "horainicio_horario"
+              },
+              {
+                "objectType": "TableField_LOGICAL",
+                "name": "horafin_horario",
+                "type": "TIME",
+                "length": 0,
+                "decimals": 0,
+                "isNullable": true,
+                "defaultType": "Null",
+                "defaultValue": "",
+                "comment": "",
+                "oldName": "horafin_horario"
+              },
+              {
+                "objectType": "TableField_LOGICAL",
+                "name": "mensaje_horario",
+                "type": "NATIONAL CHARACTER VARYING",
+                "length": 255,
+                "decimals": 0,
+                "isNullable": true,
+                "defaultType": "Null",
+                "defaultValue": "",
+                "comment": "",
+                "oldName": "mensaje_horario"
+              },
+              {
+                "objectType": "TableField_LOGICAL",
+                "name": "estado_horario",
+                "type": "BIT",
+                "length": 1,
+                "decimals": 0,
+                "isNullable": true,
+                "defaultType": "Null",
+                "defaultValue": "",
+                "comment": "",
+                "oldName": "estado_horario"
+              },
+              {
+                "objectType": "TableField_LOGICAL",
+                "name": "id_personal",
+                "type": "INTEGER",
+                "length": 11,
+                "decimals": 0,
+                "isNullable": false,
+                "defaultType": "Others",
+                "defaultValue": "",
+                "comment": "",
+                "oldName": "id_personal"
+              }
+            ],
+            "foreignKeys": [
+              {
+                "objectType": "ForeignKey_LOGICAL",
+                "name": "fk_Horario_Personal de Salud_1",
+                "fields": [
+                  "id_personal"
+                ],
+                "referencedSchema": "default",
+                "referencedTable": "Personal de Salud",
+                "referencedFields": [
+                  "iddoc"
+                ],
+                "sourceCardinality": "NoneRelationship",
+                "targetCardinality": "NoneRelationship",
+                "comment": "",
+                "oldName": ""
+              }
+            ],
+            "indexes": [
+              {
+                "objectType": "Index_LOGICAL",
+                "name": "fk_horario_doctor_idx",
+                "fields": [
+                  "id_personal"
+                ],
+                "type": "Default",
+                "comment": "",
+                "oldName": "fk_horario_doctor_idx"
+              }
+            ],
+            "uniques": [],
+            "primaryKey": {
+              "objectType": "PrimaryKey_LOGICAL",
+              "name": "",
+              "fields": [
+                "id_horario"
+              ],
+              "oldName": ""
+            }
+          }
+        ]
+      }
+    ]
+  },
+  "diagrams": [
+    {
+      "name": "Diagram 1",
+      "paperWidth": 2,
+      "paperHeight": 3,
+      "tableFont": "Arial Unicode MS",
+      "tableFontSize": 14,
+      "isBalckWhite": false,
+      "showDBSchemaName": false,
+      "showViewRelations": true,
+      "notation": "default",
+      "showFieldComment": false,
+      "showTableComment": false,
+      "shapes": [
+        {
+          "type": "table",
+          "schemaName": "default",
+          "tableName": "Asistencia",
+          "x": 430,
+          "y": 600,
+          "width": 211,
+          "height": 130,
+          "isBold": false,
+          "titleColor": {
+            "r": 55,
+            "g": 131,
+            "b": 192,
+            "a": 1
+          }
+        },
+        {
+          "type": "table",
+          "schemaName": "default",
+          "tableName": "hospital.citas",
+          "x": 1930,
+          "y": 2730,
+          "width": 294,
+          "height": 310,
+          "isBold": false,
+          "titleColor": {
+            "r": 55,
+            "g": 131,
+            "b": 192,
+            "a": 1
+          }
+        },
+        {
+          "type": "table",
+          "schemaName": "default",
+          "tableName": "hospital.consultorio",
+          "x": 1470,
+          "y": 2580,
+          "width": 307,
+          "height": 130,
+          "isBold": false,
+          "titleColor": {
+            "r": 55,
+            "g": 131,
+            "b": 192,
+            "a": 1
+          }
+        },
+        {
+          "type": "table",
+          "schemaName": "default",
+          "tableName": "Personal de Salud",
+          "x": 890,
+          "y": 1300,
+          "width": 270,
+          "height": 410,
+          "isBold": false,
+          "titleColor": {
+            "r": 55,
+            "g": 131,
+            "b": 192,
+            "a": 1
+          }
+        },
+        {
+          "type": "table",
+          "schemaName": "default",
+          "tableName": "Empleado",
+          "x": 640,
+          "y": 960,
+          "width": 264,
+          "height": 270,
+          "isBold": false,
+          "titleColor": {
+            "r": 55,
+            "g": 131,
+            "b": 192,
+            "a": 1
+          }
+        },
+        {
+          "type": "table",
+          "schemaName": "default",
+          "tableName": "Historia Clinica",
+          "x": 2040,
+          "y": 1380,
+          "width": 355,
+          "height": 970,
+          "isBold": false,
+          "titleColor": {
+            "r": 55,
+            "g": 131,
+            "b": 192,
+            "a": 1
+          }
+        },
+        {
+          "type": "table",
+          "schemaName": "default",
+          "tableName": "Horario",
+          "x": 560,
+          "y": 1800,
+          "width": 270,
+          "height": 190,
+          "isBold": false,
+          "titleColor": {
+            "r": 55,
+            "g": 131,
+            "b": 192,
+            "a": 1
+          }
+        },
+        {
+          "type": "table",
+          "schemaName": "default",
+          "tableName": "Licencias",
+          "x": 1000,
+          "y": 730,
+          "width": 274,
+          "height": 230,
+          "isBold": false,
+          "titleColor": {
+            "r": 55,
+            "g": 131,
+            "b": 192,
+            "a": 1
+          }
+        },
+        {
+          "type": "table",
+          "schemaName": "default",
+          "tableName": "Paciente",
+          "x": 2540,
+          "y": 1420,
+          "width": 299,
+          "height": 370,
+          "isBold": false,
+          "titleColor": {
+            "r": 55,
+            "g": 131,
+            "b": 192,
+            "a": 1
+          }
+        },
+        {
+          "type": "table",
+          "schemaName": "default",
+          "tableName": "Papel",
+          "x": 1000,
+          "y": 1030,
+          "width": 270,
+          "height": 90,
+          "isBold": false,
+          "titleColor": {
+            "r": 55,
+            "g": 131,
+            "b": 192,
+            "a": 1
+          }
+        },
+        {
+          "type": "table",
+          "schemaName": "default",
+          "tableName": "Referencia",
+          "x": 2450,
+          "y": 580,
+          "width": 311,
+          "height": 270,
+          "isBold": false,
+          "titleColor": {
+            "r": 55,
+            "g": 131,
+            "b": 192,
+            "a": 1
+          }
+        },
+        {
+          "type": "table",
+          "schemaName": "default",
+          "tableName": "Tipo Licencia",
+          "x": 1000,
+          "y": 570,
+          "width": 270,
+          "height": 90,
+          "isBold": false,
+          "titleColor": {
+            "r": 55,
+            "g": 131,
+            "b": 192,
+            "a": 1
+          }
+        }
+      ],
+      "layers": [
+        {
+          "name": "Personal de Salud",
+          "x": 400,
+          "y": 500,
+          "width": 920,
+          "height": 1570,
+          "layerColor": {
+            "r": 255,
+            "g": 128,
+            "b": 64,
+            "a": 1
+          },
+          "fontName": "Arial Unicode MS",
+          "fontSize": 14,
+          "fontColor": {
+            "r": 51,
+            "g": 51,
+            "b": 51,
+            "a": 1
+          }
+        }
+      ],
+      "relations": [
+        {
+          "name": "fk_citas_consultorio",
+          "sourceTableName": "hospital.citas",
+          "sourceSchemaName": "default",
+          "lineWidth": 1,
+          "visible": true,
+          "vertices": [
+            {
+              "x": 1915,
+              "y": 2900
+            },
+            {
+              "x": 783,
+              "y": 2900
+            },
+            {
+              "x": 783,
+              "y": 2650
+            },
+            {
+              "x": 1792,
+              "y": 2650
+            }
+          ],
+          "label": {
+            "x": 1931,
+            "y": 2902,
+            "width": 138,
+            "height": 30,
+            "fontName": "Arial Unicode MS",
+            "fontSize": 14,
+            "fontColor": {
+              "r": 204,
+              "g": 204,
+              "b": 204,
+              "a": 1
+            },
+            "isFontBold": false,
+            "isFontItalic": false,
+            "isVisible": false
+          }
+        },
+        {
+          "name": "fk_citas_doctor",
+          "sourceTableName": "hospital.citas",
+          "sourceSchemaName": "default",
+          "lineWidth": 1,
+          "visible": true,
+          "vertices": [
+            {
+              "x": 2080,
+              "y": 3055
+            },
+            {
+              "x": 2080,
+              "y": 2240
+            },
+            {
+              "x": 1000,
+              "y": 2240
+            },
+            {
+              "x": 1000,
+              "y": 1725
+            }
+          ],
+          "label": {
+            "x": 2088,
+            "y": 3045,
+            "width": 106,
+            "height": 30,
+            "fontName": "Arial Unicode MS",
+            "fontSize": 14,
+            "fontColor": {
+              "r": 204,
+              "g": 204,
+              "b": 204,
+              "a": 1
+            },
+            "isFontBold": false,
+            "isFontItalic": false,
+            "isVisible": false
+          }
+        },
+        {
+          "name": "fk_asistencia_empleado",
+          "sourceTableName": "Asistencia",
+          "sourceSchemaName": "default",
+          "lineWidth": 1,
+          "visible": true,
+          "vertices": [
+            {
+              "x": 530,
+              "y": 745
+            },
+            {
+              "x": 530,
+              "y": 990
+            },
+            {
+              "x": 530,
+              "y": 1100
+            },
+            {
+              "x": 625,
+              "y": 1100
+            }
+          ],
+          "label": {
+            "x": 538,
+            "y": 735,
+            "width": 165,
+            "height": 30,
+            "fontName": "Arial Unicode MS",
+            "fontSize": 14,
+            "fontColor": {
+              "r": 204,
+              "g": 204,
+              "b": 204,
+              "a": 1
+            },
+            "isFontBold": false,
+            "isFontItalic": false,
+            "isVisible": false
+          }
+        },
+        {
+          "name": "fk_historiaclinica_consultorio",
+          "sourceTableName": "Historia Clinica",
+          "sourceSchemaName": "default",
+          "lineWidth": 1,
+          "visible": true,
+          "vertices": [
+            {
+              "x": 2210,
+              "y": 2365
+            },
+            {
+              "x": 2210,
+              "y": 1945
+            },
+            {
+              "x": 1620,
+              "y": 1945
+            },
+            {
+              "x": 1620,
+              "y": 2565
+            }
+          ],
+          "label": {
+            "x": 2218,
+            "y": 2355,
+            "width": 201,
+            "height": 30,
+            "fontName": "Arial Unicode MS",
+            "fontSize": 14,
+            "fontColor": {
+              "r": 204,
+              "g": 204,
+              "b": 204,
+              "a": 1
+            },
+            "isFontBold": false,
+            "isFontItalic": false,
+            "isVisible": false
+          }
+        },
+        {
+          "name": "fk_historiaclinica_doctor",
+          "sourceTableName": "Historia Clinica",
+          "sourceSchemaName": "default",
+          "lineWidth": 1,
+          "visible": true,
+          "vertices": [
+            {
+              "x": 2025,
+              "y": 1870
+            },
+            {
+              "x": 1175,
+              "y": 1520
+            }
+          ],
+          "label": {
+            "x": 2041,
+            "y": 1872,
+            "width": 169,
+            "height": 30,
+            "fontName": "Arial Unicode MS",
+            "fontSize": 14,
+            "fontColor": {
+              "r": 204,
+              "g": 204,
+              "b": 204,
+              "a": 1
+            },
+            "isFontBold": false,
+            "isFontItalic": false,
+            "isVisible": false
+          }
+        },
+        {
+          "name": "fk_licencias_empleado",
+          "sourceTableName": "Licencias",
+          "sourceSchemaName": "default",
+          "lineWidth": 1,
+          "visible": true,
+          "vertices": [
+            {
+              "x": 985,
+              "y": 850
+            },
+            {
+              "x": 750,
+              "y": 850
+            },
+            {
+              "x": 750,
+              "y": 945
+            }
+          ],
+          "label": {
+            "x": 1001,
+            "y": 852,
+            "width": 157,
+            "height": 30,
+            "fontName": "Arial Unicode MS",
+            "fontSize": 14,
+            "fontColor": {
+              "r": 204,
+              "g": 204,
+              "b": 204,
+              "a": 1
+            },
+            "isFontBold": false,
+            "isFontItalic": false,
+            "isVisible": false
+          }
+        },
+        {
+          "name": "fk_citas_paciente",
+          "sourceTableName": "hospital.citas",
+          "sourceSchemaName": "default",
+          "lineWidth": 1,
+          "visible": true,
+          "vertices": [
+            {
+              "x": 2080,
+              "y": 2715
+            },
+            {
+              "x": 2080,
+              "y": 1735
+            },
+            {
+              "x": 2690,
+              "y": 1735
+            },
+            {
+              "x": 2690,
+              "y": 1805
+            }
+          ],
+          "label": {
+            "x": 2088,
+            "y": 2725,
+            "width": 120,
+            "height": 30,
+            "fontName": "Arial Unicode MS",
+            "fontSize": 14,
+            "fontColor": {
+              "r": 204,
+              "g": 204,
+              "b": 204,
+              "a": 1
+            },
+            "isFontBold": false,
+            "isFontItalic": false,
+            "isVisible": false
+          }
+        },
+        {
+          "name": "fk_historiaclinica_paciente",
+          "sourceTableName": "Historia Clinica",
+          "sourceSchemaName": "default",
+          "lineWidth": 1,
+          "visible": true,
+          "vertices": [
+            {
+              "x": 2410,
+              "y": 1870
+            },
+            {
+              "x": 2525,
+              "y": 1610
+            }
+          ],
+          "label": {
+            "x": 2406,
+            "y": 1857,
+            "width": 183,
+            "height": 30,
+            "fontName": "Arial Unicode MS",
+            "fontSize": 14,
+            "fontColor": {
+              "r": 204,
+              "g": 204,
+              "b": 204,
+              "a": 1
+            },
+            "isFontBold": false,
+            "isFontItalic": false,
+            "isVisible": false
+          }
+        },
+        {
+          "name": "fk_empleado_papel",
+          "sourceTableName": "Empleado",
+          "sourceSchemaName": "default",
+          "lineWidth": 1,
+          "visible": true,
+          "vertices": [
+            {
+              "x": 919,
+              "y": 1100
+            },
+            {
+              "x": 937,
+              "y": 1100
+            },
+            {
+              "x": 937,
+              "y": 1100
+            },
+            {
+              "x": 985,
+              "y": 1100
+            }
+          ],
+          "label": {
+            "x": 915,
+            "y": 1102,
+            "width": 138,
+            "height": 30,
+            "fontName": "Arial Unicode MS",
+            "fontSize": 14,
+            "fontColor": {
+              "r": 204,
+              "g": 204,
+              "b": 204,
+              "a": 1
+            },
+            "isFontBold": false,
+            "isFontItalic": false,
+            "isVisible": false
+          }
+        },
+        {
+          "name": "fk_citas_referencia",
+          "sourceTableName": "hospital.citas",
+          "sourceSchemaName": "default",
+          "lineWidth": 1,
+          "visible": true,
+          "vertices": [
+            {
+              "x": 2239,
+              "y": 2900
+            },
+            {
+              "x": 1560,
+              "y": 2900
+            },
+            {
+              "x": 1560,
+              "y": 870
+            },
+            {
+              "x": 2776,
+              "y": 835
+            }
+          ],
+          "label": {
+            "x": 2235,
+            "y": 2902,
+            "width": 129,
+            "height": 30,
+            "fontName": "Arial Unicode MS",
+            "fontSize": 14,
+            "fontColor": {
+              "r": 204,
+              "g": 204,
+              "b": 204,
+              "a": 1
+            },
+            "isFontBold": false,
+            "isFontItalic": false,
+            "isVisible": false
+          }
+        },
+        {
+          "name": "fk_referencia_histclinica",
+          "sourceTableName": "Referencia",
+          "sourceSchemaName": "default",
+          "lineWidth": 1,
+          "visible": true,
+          "vertices": [
+            {
+              "x": 2435,
+              "y": 730
+            },
+            {
+              "x": 2210,
+              "y": 730
+            },
+            {
+              "x": 2210,
+              "y": 1365
+            }
+          ],
+          "label": {
+            "x": 2451,
+            "y": 732,
+            "width": 166,
+            "height": 30,
+            "fontName": "Arial Unicode MS",
+            "fontSize": 14,
+            "fontColor": {
+              "r": 204,
+              "g": 204,
+              "b": 204,
+              "a": 1
+            },
+            "isFontBold": false,
+            "isFontItalic": false,
+            "isVisible": false
+          }
+        },
+        {
+          "name": "fk_referencia_paciente",
+          "sourceTableName": "Referencia",
+          "sourceSchemaName": "default",
+          "lineWidth": 1,
+          "visible": true,
+          "vertices": [
+            {
+              "x": 2620,
+              "y": 865
+            },
+            {
+              "x": 2620,
+              "y": 1145
+            },
+            {
+              "x": 2690,
+              "y": 1145
+            },
+            {
+              "x": 2690,
+              "y": 1405
+            }
+          ],
+          "label": {
+            "x": 2628,
+            "y": 855,
+            "width": 157,
+            "height": 30,
+            "fontName": "Arial Unicode MS",
+            "fontSize": 14,
+            "fontColor": {
+              "r": 204,
+              "g": 204,
+              "b": 204,
+              "a": 1
+            },
+            "isFontBold": false,
+            "isFontItalic": false,
+            "isVisible": false
+          }
+        },
+        {
+          "name": "fk_licencias_tipolicencia",
+          "sourceTableName": "Licencias",
+          "sourceSchemaName": "default",
+          "lineWidth": 1,
+          "visible": true,
+          "vertices": [
+            {
+              "x": 1130,
+              "y": 715
+            },
+            {
+              "x": 1130,
+              "y": 685
+            },
+            {
+              "x": 1130,
+              "y": 685
+            },
+            {
+              "x": 1130,
+              "y": 675
+            }
+          ],
+          "label": {
+            "x": 1138,
+            "y": 725,
+            "width": 167,
+            "height": 30,
+            "fontName": "Arial Unicode MS",
+            "fontSize": 14,
+            "fontColor": {
+              "r": 204,
+              "g": 204,
+              "b": 204,
+              "a": 1
+            },
+            "isFontBold": false,
+            "isFontItalic": false,
+            "isVisible": false
+          }
+        },
+        {
+          "name": "fk_Horario_Personal de Salud_1",
+          "sourceTableName": "Horario",
+          "sourceSchemaName": "default",
+          "lineWidth": 1,
+          "visible": true,
+          "vertices": [
+            {
+              "x": 690,
+              "y": 1785
+            },
+            {
+              "x": 690,
+              "y": 1500
+            },
+            {
+              "x": 875,
+              "y": 1500
+            }
+          ],
+          "label": {
+            "x": 692,
+            "y": 1755,
+            "width": 217,
+            "height": 30,
+            "fontName": "Arial Unicode MS",
+            "fontSize": 14,
+            "fontColor": {
+              "r": 204,
+              "g": 204,
+              "b": 204,
+              "a": 1
+            },
+            "isFontBold": false,
+            "isFontItalic": false,
+            "isVisible": false
+          }
+        }
+      ],
+      "viewRelations": []
+    }
+  ]
+}

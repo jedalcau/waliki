@@ -373,8 +373,8 @@
           "type": "table",
           "schemaName": "default",
           "tableName": "Asistencia",
-          "x": 220,
-          "y": 340,
+          "x": 230,
+          "y": 230,
           "width": 150,
           "height": 80,
           "isBold": false,
@@ -447,9 +447,9 @@
           "width": 480,
           "height": 870,
           "layerColor": {
-            "r": 133,
-            "g": 17,
-            "b": 238,
+            "r": 255,
+            "g": 128,
+            "b": 64,
             "a": 1
           },
           "fontName": "Arial Unicode MS",
@@ -468,9 +468,9 @@
           "width": 430,
           "height": 870,
           "layerColor": {
-            "r": 255,
-            "g": 255,
-            "b": 132,
+            "r": 0,
+            "g": 128,
+            "b": 204,
             "a": 1
           },
           "fontName": "Arial Unicode MS",
@@ -505,8 +505,8 @@
             }
           ],
           "label": {
-            "x": 485,
-            "y": 832,
+            "x": 565,
+            "y": 842,
             "width": 198,
             "height": 30,
             "fontName": "Arial Unicode MS",
@@ -530,11 +530,11 @@
           "visible": true,
           "vertices": [
             {
-              "x": 290,
-              "y": 435
+              "x": 300,
+              "y": 325
             },
             {
-              "x": 290,
+              "x": 300,
               "y": 530
             },
             {
@@ -543,8 +543,8 @@
             }
           ],
           "label": {
-            "x": 292,
-            "y": 385,
+            "x": 382,
+            "y": 285,
             "width": 174,
             "height": 30,
             "fontName": "Arial Unicode MS",
@@ -585,8 +585,8 @@
             }
           ],
           "label": {
-            "x": 578,
-            "y": 195,
+            "x": 658,
+            "y": 205,
             "width": 188,
             "height": 30,
             "fontName": "Arial Unicode MS",
@@ -627,8 +627,8 @@
             }
           ],
           "label": {
-            "x": 418,
-            "y": 745,
+            "x": 498,
+            "y": 755,
             "width": 217,
             "height": 30,
             "fontName": "Arial Unicode MS",
@@ -665,8 +665,8 @@
             }
           ],
           "label": {
-            "x": 331,
-            "y": 342,
+            "x": 411,
+            "y": 352,
             "width": 154,
             "height": 30,
             "fontName": "Arial Unicode MS",
@@ -703,8 +703,8 @@
             }
           ],
           "label": {
-            "x": 317,
-            "y": 222,
+            "x": 397,
+            "y": 232,
             "width": 168,
             "height": 30,
             "fontName": "Arial Unicode MS",
