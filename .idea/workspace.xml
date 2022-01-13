@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="2723a332-49f9-4a55-9927-e1a4339aec2c" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/modelado/1. Modelo de CU del Negocio.emx" beforeDir="false" afterPath="$PROJECT_DIR$/modelado/1. Modelo de CU del Negocio.emx" afterDir="false" />
-    </list>
+    <list default="true" id="2723a332-49f9-4a55-9927-e1a4339aec2c" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -51,7 +49,7 @@
       <workItem from="1641599932931" duration="89000" />
       <workItem from="1641600137419" duration="4000" />
       <workItem from="1641600247489" duration="1105000" />
-      <workItem from="1641673750988" duration="653000" />
+      <workItem from="1641673750988" duration="1378000" />
     </task>
     <servers />
   </component>
