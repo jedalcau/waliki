@@ -216,7 +216,7 @@
             <children xmi:type="notation:SemanticListCompartment" xmi:id="_AeTLVHDREey6nMQA0TH5hA" type="OperationCompartment"/>
             <children xmi:type="notation:SemanticListCompartment" xmi:id="_AeTLVXDREey6nMQA0TH5hA" visible="false" type="SignalCompartment"/>
             <children xmi:type="umlnotation:UMLShapeCompartment" xmi:id="_AeTLVnDREey6nMQA0TH5hA" visible="false" type="StructureCompartment"/>
-            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_AeSkQXDREey6nMQA0TH5hA" x="5106" y="5609"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_AeSkQXDREey6nMQA0TH5hA" x="5106" y="5609" width="2802"/>
           </children>
           <children xmi:type="umlnotation:UMLShape" xmi:id="_CvjcQHDREey6nMQA0TH5hA" element="_CiGPEHDREey6nMQA0TH5hA" fontName="Segoe UI" fontHeight="8" transparency="0" lineColor="14263149" lineWidth="1" showStereotype="Image">
             <children xmi:type="notation:DecorationNode" xmi:id="_CvkDUHDREey6nMQA0TH5hA" type="ImageCompartment">
@@ -229,7 +229,7 @@
             <children xmi:type="notation:SemanticListCompartment" xmi:id="_CvkDVnDREey6nMQA0TH5hA" type="OperationCompartment"/>
             <children xmi:type="notation:SemanticListCompartment" xmi:id="_CvkqYHDREey6nMQA0TH5hA" visible="false" type="SignalCompartment"/>
             <children xmi:type="umlnotation:UMLShapeCompartment" xmi:id="_CvkqYXDREey6nMQA0TH5hA" visible="false" type="StructureCompartment"/>
-            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_CvjcQXDREey6nMQA0TH5hA" x="10824" y="5280" width="2750"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_CvjcQXDREey6nMQA0TH5hA" x="9240" y="5280" width="3278"/>
           </children>
           <element xsi:nil="true"/>
         </contents>
