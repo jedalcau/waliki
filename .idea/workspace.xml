@@ -2,11 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2723a332-49f9-4a55-9927-e1a4339aec2c" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/view/footer.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/view/header.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/view/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/view/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/view/index.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/modelado/.project" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/view/header.php" beforeDir="false" afterPath="$PROJECT_DIR$/view/header.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -58,6 +56,8 @@
       <workItem from="1641673750988" duration="1378000" />
       <workItem from="1643669562954" duration="610000" />
       <workItem from="1643670302048" duration="1473000" />
+      <workItem from="1644635720064" duration="79000" />
+      <workItem from="1644635815170" duration="211000" />
     </task>
     <servers />
   </component>
