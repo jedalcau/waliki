@@ -7,18 +7,19 @@ USE db_waliki;
 #Creacion de Tabla PACIENTE
 CREATE TABLE tbl_paciente (
   id_pacie INT(11) NOT NULL AUTO_INCREMENT,
+  numero_hicli INT (11) NOT NULL,
   dni_pacie VARCHAR(11) NOT NULL,
   nombres_pacie VARCHAR(80) NOT NULL,
   apellidos_pacie VARCHAR(150) NOT NULL,
   fecha_nacimiento_pacie  VARCHAR(150) NOT NULL,
-  sexo_pacie VARCHAR(12) NOT NULL,
+  genero_pacie VARCHAR(12) NOT NULL,
   direccion_pacie  VARCHAR(200) DEFAULT NULL,
-  distrito_pacie  VARCHAR(40) DEFAULT NULL,
-  provincia_pacie VARCHAR(30) DEFAULT NULL,
+  provincia_pacie  VARCHAR(40) DEFAULT NULL,
+  distrito_pacie VARCHAR(30) DEFAULT NULL,
   email_pacie VARCHAR(150) NOT NULL,
   telefono_pacie VARCHAR(40) DEFAULT NULL,
+  estado_pacie TINYINT(1) DEFAULT NULL,
   avatar_pacie VARCHAR(200) DEFAULT NULL,
-  status_pacie TINYINT(1) DEFAULT NULL,
   fecha_creacion_pacie DATETIME DEFAULT NULL,
   PRIMARY KEY (id_pacie)
 ) ENGINE=InnoDB AUTO_INCREMENT=394 DEFAULT CHARSET=utf8;
@@ -27,8 +28,17 @@ CREATE TABLE tbl_paciente (
 CREATE TABLE tbl_atepaciente(
     id_atepacie INT (11) NOT NULL AUTO_INCREMENT,
     numero_hicli VARCHAR(20) DEFAULT NULL,
-    codigo_sis VARCHAR(45) DEFAULT NULL
-)
+    codigo_sis VARCHAR(45) DEFAULT NULL,
+
+    id_pacie INT(11) DEFAULT NULL,
+    edad_pacie INT(11) DEFAULT NULL,
+    id_persal INT(11) DEFAULT NULL,
+    PRIMARY KEY (id_atepacie),
+    KEY
+  KEY fk_atencion_paciente_idx (`idpaciente`),
+  CONSTRAINT fk_atencion_doctor FOREIGN KEY (`iddoc`) REFERENCES `doctor` (`iddoc`) ON DELETE CASCADE ON UPDATE CASCADE,
+  CONSTRAINT fk_atencion_paciente FOREIGN KEY (`idpaciente`) REFERENCES `paciente` (`idpac`) ON DELETE CASCADE ON UPDATE CASCADE
+)ENGINE=InnoDB AUTO_INCREMENT=69 DEFAULT CHARSET=utf8;
 
 #Creacion de Tabla CONSULTORIO
 CREATE TABLE tbl_consultorio(
