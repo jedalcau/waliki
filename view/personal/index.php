@@ -1,5 +1,5 @@
 <?php
-    include 'header.php'
+include 'header.php'
 ?>
         <!-- PRINCIPAL SECTION -->
         <div class="page-wrapper">
@@ -270,7 +270,7 @@
 				</div>
                 FIN LISTA CITAS Y PERSONAL DE SALUD-->
 
-                <!-- LISTA PACIENTES NUEVEOS -->
+                <!-- LISTA PACIENTES NUEVOS -->
                 <div class="row">
                     <div class="col-12 col-md-6 col-lg-8 col-xl-8">
                         <div class="card">
@@ -283,7 +283,7 @@
                                         <tbody>
                                         <tr>
                                             <td>
-                                                <img width="28" height="28" class="rounded-circle" src="assets/img/user.jpg" alt="">
+                                                <img width="28" height="28" class="rounded-circle" src="../assets/img/user.jpg" alt="">
                                                 <h2>John Doe</h2>
                                             </td>
                                             <td>Johndoe21@gmail.com</td>
@@ -292,7 +292,7 @@
                                         </tr>
                                         <tr>
                                             <td>
-                                                <img width="28" height="28" class="rounded-circle" src="assets/img/user.jpg" alt="">
+                                                <img width="28" height="28" class="rounded-circle" src="../assets/img/user.jpg" alt="">
                                                 <h2>Richard</h2>
                                             </td>
                                             <td>Richard123@yahoo.com</td>
@@ -301,7 +301,7 @@
                                         </tr>
                                         <tr>
                                             <td>
-                                                <img width="28" height="28" class="rounded-circle" src="assets/img/user.jpg" alt="">
+                                                <img width="28" height="28" class="rounded-circle" src="../assets/img/user.jpg" alt="">
                                                 <h2>Villiam</h2>
                                             </td>
                                             <td>Richard123@yahoo.com</td>
@@ -310,7 +310,7 @@
                                         </tr>
                                         <tr>
                                             <td>
-                                                <img width="28" height="28" class="rounded-circle" src="assets/img/user.jpg" alt="">
+                                                <img width="28" height="28" class="rounded-circle" src="../assets/img/user.jpg" alt="">
                                                 <h2>Martin</h2>
                                             </td>
                                             <td>Richard123@yahoo.com</td>
@@ -608,5 +608,5 @@
         </div>
         <!-- FIN PRINCIPAL SECTION -->
 <?php
-    include 'footer.php'
+include 'footer.php'
 ?>

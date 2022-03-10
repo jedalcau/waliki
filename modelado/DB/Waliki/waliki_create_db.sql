@@ -2,6 +2,7 @@
 CREATE DATABASE db_waliki;
 
 DROP DATABASE db_waliki;
+
 USE db_waliki;
 
 #Creacion de Tabla PACIENTE
