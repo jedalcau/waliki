@@ -24,9 +24,25 @@
             <div class="row">
                 <div class="col-md-12">
                     <div class="card-box">
-                        <h4 class="card-title">Busqueda de Personal</h4>
+                        <!--TITULO BUSQUEDA Y BOTON-->
+                        <div class="row">
+                            <!--PACIENTE-->
+                            <div class="col-sm-7 col-6">
+                                <h4 class="card-title">Busqueda de Paciente</h4>
+                            </div>
+                            <!--FIN PERFIL-->
+
+                            <!--BOTON BUSCAR-->
+                            <div class="col-sm-5 col-6 text-right m-b-30">
+                                <a href="#" class="btn btn-primary btn-rounded"><i class="fa fa-search"></i> Buscar Paciente</a>
+                            </div>
+                            <!--FIN BOTON BUSCAR-->
+                        </div>
+                        <!--FIN TITULO BUSQUEDA Y BOTON-->
                         <form>
+                            <!--SECCION BUSQUEDA-->
                             <div class="row">
+                                <!--BUSQUEDA POR DNI-->
                                 <div class="col-md-6">
                                     <div class="form-group row">
                                         <label class="col-md-3 col-form-label">por DNI</label>
@@ -35,6 +51,9 @@
                                         </div>
                                     </div>
                                 </div>
+                                <!--FIN BUSQUEDA POR DNI-->
+
+                                <!--BUSQUEDA POR APELLIDOS-->
                                 <div class="col-md-6">
                                     <div class="form-group row">
                                         <label class="col-md-3 col-form-label">por APELLIDO</label>
@@ -42,77 +61,13 @@
                                             <input type="text" class="form-control">
                                         </div>
                                     </div>
-                                    <div class="form-group row">
-                                        <label class="col-md-3 col-form-label">Email</label>
-                                        <div class="col-md-9">
-                                            <input type="text" class="form-control">
-                                        </div>
-                                    </div>
-                                    <div class="form-group row">
-                                        <label class="col-md-3 col-form-label">Password</label>
-                                        <div class="col-md-9">
-                                            <input type="password" class="form-control">
-                                        </div>
-                                    </div>
-                                    <div class="form-group row">
-                                        <label class="col-md-3 col-form-label">Repeat Password</label>
-                                        <div class="col-md-9">
-                                            <input type="password" class="form-control">
-                                        </div>
-                                    </div>
                                 </div>
+                                <!--FIN BUSQUEDA POR APELLIDOS-->
                             </div>
-                            <h4 class="card-title">Address</h4>
-                            <div class="row">
-                                <div class="col-md-6">
-                                    <div class="form-group row">
-                                        <label class="col-md-3 col-form-label">Address Line 1</label>
-                                        <div class="col-md-9">
-                                            <input type="text" class="form-control">
-                                        </div>
-                                    </div>
-                                    <div class="form-group row">
-                                        <label class="col-md-3 col-form-label">Address Line 2</label>
-                                        <div class="col-md-9">
-                                            <input type="text" class="form-control">
-                                        </div>
-                                    </div>
-                                    <div class="form-group row">
-                                        <label class="col-md-3 col-form-label">State</label>
-                                        <div class="col-md-9">
-                                            <input type="text" class="form-control">
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-md-6">
-                                    <div class="form-group row">
-                                        <label class="col-md-3 col-form-label">City</label>
-                                        <div class="col-md-9">
-                                            <input type="text" class="form-control">
-                                        </div>
-                                    </div>
-                                    <div class="form-group row">
-                                        <label class="col-md-3 col-form-label">Country</label>
-                                        <div class="col-md-9">
-                                            <input type="text" class="form-control">
-                                        </div>
-                                    </div>
-                                    <div class="form-group row">
-                                        <label class="col-md-3 col-form-label">Postal Code</label>
-                                        <div class="col-md-9">
-                                            <input type="text" class="form-control">
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="text-right">
-                                <button type="submit" class="btn btn-primary">Submit</button>
-                            </div>
+                            <!--SECCION BUSQUEDA-->
                         </form>
                     </div>
                 </div>
-
             </div>
             <!--FIN BUSCADOR PACIENTE-->
 
